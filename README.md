@@ -2,6 +2,8 @@
 
 This repository showcases a web application that displays a grid of boxes on the main page, each representing a feature of GitHub Copilot Business or Enterprise. The boxes are loaded from a local `data.json` file and are clickable, leading to detail pages. These detail pages contain the title of the feature, an inline video player showing a related video from YouTube, and a markdown description of the feature.
 
+[![pages-build-deployment](https://github.com/rajbos/copilot-videos/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/rajbos/copilot-videos/actions/workflows/pages/pages-build-deployment)
+
 ## Implementation
 
 The application is built using HTML, CSS, and JavaScript, with data stored in a `data.json` file. This structure allows for a dynamic and interactive user experience, where users can explore various features of GitHub Copilot by clicking on the boxes.
