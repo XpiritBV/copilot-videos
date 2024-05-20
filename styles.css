@@ -79,3 +79,15 @@ a {
 #feature-detail-container a:hover {
     background-color: #0056b3;
 }
+
+/* Media queries for screens smaller than 768px */
+@media (max-width: 768px) {
+    #main-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
