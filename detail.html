@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Detail</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="feature-detail-container">
+        <h1 id="feature-title">Feature Title</h1>
+        <div id="video-container">
+            <iframe id="feature-video" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div id="description-container">
+            <p id="feature-description">Feature Description</p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const title = params.get('title');
+            const videoUrl = params.get('videoUrl');
+            const description = params.get('description');
+
+            document.getElementById('feature-title').textContent = decodeURIComponent(title);
+            document.getElementById('feature-video').src = decodeURIComponent(videoUrl);
+            document.getElementById('feature-description').textContent = decodeURIComponent(description);
+        });
+    </script>
+</body>
+</html>

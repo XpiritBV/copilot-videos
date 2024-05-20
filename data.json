@@ -1,0 +1,104 @@
+{
+  "features": [
+    {
+      "sku": "GitHub Copilot Business",
+      "items": [
+        {
+          "title": "Code completions",
+          "videoUrl": "https://youtube.com/example1",
+          "description": "Enhance your coding experience with AI-powered code completions."
+        },
+        {
+          "title": "Chat in IDE",
+          "videoUrl": "https://youtube.com/example2",
+          "description": "Communicate with Copilot directly within your IDE for instant assistance."
+        },
+        {
+          "title": "Chat on mobile",
+          "videoUrl": "https://youtube.com/example3",
+          "description": "Get coding assistance on-the-go with Copilot's mobile chat feature."
+        },
+        {
+          "title": "CLI assistance",
+          "videoUrl": "https://youtube.com/example4",
+          "description": "Streamline your command line tasks with Copilot's CLI assistance."
+        },
+        {
+          "title": "Code referencing",
+          "videoUrl": "https://youtube.com/example5",
+          "description": "Quickly reference code snippets and examples with Copilot."
+        },
+        {
+          "title": "Unit tests",
+          "videoUrl": "https://youtube.com/example6",
+          "description": "Automate your testing process with Copilot's unit test generation."
+        },
+        {
+          "title": "Code translation",
+          "videoUrl": "https://youtube.com/example7",
+          "description": "Translate code across different languages with ease using Copilot."
+        },
+        {
+          "title": "Code documentation",
+          "videoUrl": "https://youtube.com/example8",
+          "description": "Generate comprehensive documentation for your codebase with Copilot."
+        },
+        {
+          "title": "Code explanation",
+          "videoUrl": "https://youtube.com/example9",
+          "description": "Get detailed explanations for complex code snippets with Copilot."
+        },
+        {
+          "title": "Code fixing",
+          "videoUrl": "https://youtube.com/example10",
+          "description": "Quickly fix coding errors and issues with Copilot's assistance."
+        },
+        {
+          "title": "Code debugging",
+          "videoUrl": "https://youtube.com/example11",
+          "description": "Simplify the debugging process with Copilot's insightful suggestions."
+        },
+        {
+          "title": "Slash commands",
+          "videoUrl": "https://youtube.com/example12",
+          "description": "Enhance your coding workflow with Copilot's slash commands."
+        }
+      ]
+    },
+    {
+      "sku": "GitHub Copilot Enterprise",
+      "items": [
+        {
+          "title": "Integration in Web UI",
+          "videoUrl": "https://youtube.com/example13",
+          "description": "Seamlessly integrate Copilot into your web UI for enhanced productivity."
+        },
+        {
+          "title": "Chat with your pull request",
+          "videoUrl": "https://youtube.com/example14",
+          "description": "Collaborate more effectively on pull requests with Copilot's chat feature."
+        },
+        {
+          "title": "Pull request body generation",
+          "videoUrl": "https://youtube.com/example15",
+          "description": "Automatically generate detailed pull request bodies with Copilot."
+        },
+        {
+          "title": "Chat with knowledge bases",
+          "videoUrl": "https://youtube.com/example16",
+          "description": "Access knowledge bases directly through Copilot's chat for quick information retrieval."
+        },
+        {
+          "title": "Web search with Bing",
+          "videoUrl": "https://youtube.com/example17",
+          "description": "Perform web searches within your coding environment using Copilot and Bing."
+        },
+        {
+          "title": "Fine tuned models",
+          "videoUrl": "https://youtube.com/example18",
+          "description": "Benefit from models fine-tuned for your specific coding needs with Copilot."
+        }
+      ]
+    }
+  ]
+}

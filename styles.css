@@ -1,0 +1,56 @@
+/* Main container styling */
+#main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: flex-start;
+    flex-direction: row;
+}
+/* Grid styling for both feature sections */
+.feature-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+    border: none; /* Hide the border on the feature grid */
+    justify-content: center; /* Center the grid items horizontally */
+    align-items: center; /* Center the grid items vertically */
+}
+/* Individual box styling */
+.feature-grid > div {
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    gap: 20px;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.video-box {
+    min-width: 120px; 
+    min-height: 100px; 
+    text-align: center;
+    border: 1px solid #ccc; 
+}
+.feature-grid div:hover {
+    transform: scale(1.05);
+}
+/* SKU name styling */
+.feature-grid h2 {
+    grid-column: span 4;
+    break-after: always;
+    text-align: center;
+}
+
+body {
+    background: radial-gradient(circle, rgba(34,34,59,1) 0%, rgba(14,14,44,1) 35%, black 100%);
+    color: white;
+    max-width: 1200px;
+}
+
+a {
+    color: white;
+}
+
+#business-features {
+    position: relative;
+}
