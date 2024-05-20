@@ -11,7 +11,7 @@
     flex: 1;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 7px;
+    margin-left: 7px;
     border: none; /* Hide the border on the feature grid */
     justify-content: center; /* Center the grid items horizontally */
     align-items: center; /* Center the grid items vertically */
