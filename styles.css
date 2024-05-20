@@ -53,6 +53,7 @@ a {
 
 #business-features {
     position: relative;
+    border-right: 2px solid #ccc; /* Add a right border to create a vertical divider */
 }
 
 /* Centering the content of #feature-detail-container */
