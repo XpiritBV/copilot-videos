@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="feature-detail-container">
+    <div id="feature-detail-container" style="text-align: center;">
+        <a href="index.html" style="display: inline-block; margin-bottom: 20px;">Back</a>
         <h1 id="feature-title">Feature Title</h1>
         <div id="video-container">
             <iframe id="feature-video" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -20,7 +21,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             const params = new URLSearchParams(window.location.search);
             const title = params.get('title');
-            const videoUrl = params.get('videoUrl');
+            const videoUrl = params.get('videoUrl').replace("youtube.com", "youtube.com/embed");
             const description = params.get('description');
 
             document.getElementById('feature-title').textContent = decodeURIComponent(title);

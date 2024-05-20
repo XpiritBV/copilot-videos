@@ -54,3 +54,27 @@ a {
 #business-features {
     position: relative;
 }
+
+/* Centering the content of #feature-detail-container */
+#feature-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Styling the back button for better visibility and consistency */
+#feature-detail-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#feature-detail-container a:hover {
+    background-color: #0056b3;
+}
