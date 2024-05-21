@@ -34,6 +34,28 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
 
+            // Dynamically generate filter buttons for each RSS feed
+            const filterButtonsContainer = document.getElementById('filter-buttons');
+            data.rssFeeds.feeds.forEach(feed => {
+                const button = document.createElement('button');
+                button.textContent = feed.name;
+                button.className = 'filter-btn';
+                button.addEventListener('click', () => filterNews(feed.name));
+                filterButtonsContainer.appendChild(button);
+            });
+
+            // Function to filter news items based on the selected feed
+            function filterNews(feedName) {
+                const newsItems = document.querySelectorAll('.news-item');
+                newsItems.forEach(item => {
+                    if (item.querySelector('span').textContent === feedName) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+
             // Fetch and display RSS feeds
             const rssFeeds = data.rssFeeds.feeds;
             rssFeeds.forEach(feed => {
