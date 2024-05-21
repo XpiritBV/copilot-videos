@@ -111,6 +111,9 @@ a {
 
 /* Styling for "Copilot News" section */
 #copilot-news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 40px;
     padding: 20px;
     background-color: #1e1e1e;
@@ -125,14 +128,14 @@ a {
 #news-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .news-item {
     width: 45%;
     margin: 10px;
     padding: 15px;
-    background-color: #2e2e2e;
+    background-color: rgba(46, 46, 46, 0.5); /* Updated for transparency */
     border-radius: 8px;
     color: #ffffff;
 }
@@ -154,6 +157,13 @@ a {
     color: #ffffff;
     border-radius: 15px;
     font-size: 12px;
+}
+
+/* Additional styling for publication date within .news-item */
+.news-item p.date {
+    font-size: 12px;
+    color: #adff2f;
+    margin-top: 5px;
 }
 
 /* Styling for filter buttons */

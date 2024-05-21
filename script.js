@@ -45,9 +45,10 @@ document.addEventListener('DOMContentLoaded', function() {
                             const title = item.querySelector("title").textContent;
                             const description = item.querySelector("description").textContent;
                             const pubDate = new Date(item.querySelector("pubDate").textContent);
+                            const formattedDate = pubDate.toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' });
                             const newsItem = document.createElement('div');
                             newsItem.className = 'news-item';
-                            newsItem.innerHTML = `<h4>${title}</h4><p>${description}</p><span>${feed.name}</span>`;
+                            newsItem.innerHTML = `<h4>${title}</h4><p>${description}</p><span>${feed.name}</span><p>Published: ${formattedDate}</p>`;
                             newsContainer.appendChild(newsItem);
                         });
                     });
