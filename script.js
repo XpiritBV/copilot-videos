@@ -49,6 +49,25 @@ document.addEventListener('DOMContentLoaded', function() {
                 filterButtonsContainer.appendChild(button);
             });
 
+            // Add an 'all' category button
+            const allButton = document.createElement('button');
+            allButton.textContent = 'All';
+            allButton.className = 'filter-btn';
+            allButton.addEventListener('click', function() {
+                unselectFiltersAndShowAll();
+            });
+            filterButtonsContainer.prepend(allButton);
+
+            // Function to unselect any active filter and show all RSS items
+            function unselectFiltersAndShowAll() {
+                document.querySelectorAll('.news-item').forEach(item => {
+                    item.style.display = '';
+                });
+                document.querySelectorAll('.filter-btn').forEach(button => {
+                    button.classList.remove('active');
+                });
+            }
+
             // Function to filter news items based on the selected feed
             function filterNews(feedName, clickedButton) {
                 const newsItems = document.querySelectorAll('.news-item');
@@ -80,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Fetch and display RSS feeds
             const rssFeeds = data.rssFeeds.feeds;
+            let totalItemCount = 0; // Initialize total item count
             rssFeeds.forEach(feed => {
                 fetch(feed.url)
                     .then(response => response.text())
@@ -89,6 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         let itemCount = 0; // Count the number of items for the current feed
                         items.forEach(item => {
                             itemCount++;
+                            totalItemCount++; // Increment total item count
                             const title = item.querySelector("title").textContent;
                             const description = item.querySelector("description").textContent;
                             const pubDate = new Date(item.querySelector("pubDate").textContent);
@@ -105,6 +126,8 @@ document.addEventListener('DOMContentLoaded', function() {
                                 button.textContent = `${feed.name} (${itemCount})`;
                             }
                         });
+                        // Update the 'all' button text to include the total count of all RSS items
+                        allButton.textContent = `All (${totalItemCount})`;
                     });
             });
         })
