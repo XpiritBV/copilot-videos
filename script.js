@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const businessFeatures = document.getElementById('business-features');
             const enterpriseFeatures = document.getElementById('enterprise-features');
             const newsContainer = document.createElement('div');
+            newsContainer.className = 'news-container';
             newsContainer.id = 'news-container';
             document.body.appendChild(newsContainer);
 
@@ -48,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             const formattedDate = pubDate.toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' });
                             const newsItem = document.createElement('div');
                             newsItem.className = 'news-item';
-                            newsItem.innerHTML = `<h4>${title}</h4><p>${description}</p><span>${feed.name}</span><p>Published: ${formattedDate}</p>`;
+                            newsItem.innerHTML = `<h4>${title}</h4><p>${description}</p><span>${feed.name}</span> <span class="date">Published: ${formattedDate}</span>`;
                             newsContainer.appendChild(newsItem);
                         });
                     });
