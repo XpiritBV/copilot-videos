@@ -108,3 +108,72 @@ a {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* Styling for "Copilot News" section */
+#copilot-news {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+}
+
+#copilot-news h2 {
+    color: #ffffff;
+    text-align: center;
+}
+
+#news-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.news-item {
+    width: 45%;
+    margin: 10px;
+    padding: 15px;
+    background-color: #2e2e2e;
+    border-radius: 8px;
+    color: #ffffff;
+}
+
+.news-item h4 {
+    margin: 0;
+    color: #adff2f;
+}
+
+.news-item p {
+    font-size: 14px;
+}
+
+.news-item span {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+/* Styling for filter buttons */
+#filter-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #0056b3;
+}

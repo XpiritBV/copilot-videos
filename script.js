@@ -4,12 +4,15 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             const businessFeatures = document.getElementById('business-features');
             const enterpriseFeatures = document.getElementById('enterprise-features');
+            const newsContainer = document.createElement('div');
+            newsContainer.id = 'news-container';
+            document.body.appendChild(newsContainer);
 
-            data.features.forEach(feature => {
+            // Load existing features
+            data.features.videos.forEach(feature => {
                 const featureGrid = document.createElement('div');
                 featureGrid.className = 'feature-grid'; 
 
-                // Create a new element for the SKU name
                 const skuName = document.createElement('h2');
                 skuName.textContent = feature.sku;
                 featureGrid.appendChild(skuName);
@@ -28,6 +31,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else if (feature.sku === "GitHub Copilot Enterprise") {
                     enterpriseFeatures.appendChild(featureGrid);
                 }
+            });
+
+            // Fetch and display RSS feeds
+            const rssFeeds = data.rssFeeds.feeds;
+            rssFeeds.forEach(feed => {
+                fetch(feed.url)
+                    .then(response => response.text())
+                    .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+                    .then(data => {
+                        const items = data.querySelectorAll("item");
+                        items.forEach(item => {
+                            const title = item.querySelector("title").textContent;
+                            const description = item.querySelector("description").textContent;
+                            const pubDate = new Date(item.querySelector("pubDate").textContent);
+                            const newsItem = document.createElement('div');
+                            newsItem.className = 'news-item';
+                            newsItem.innerHTML = `<h4>${title}</h4><p>${description}</p><span>${feed.name}</span>`;
+                            newsContainer.appendChild(newsItem);
+                        });
+                    });
             });
         })
         .catch(error => console.error('Error loading the data:', error));
