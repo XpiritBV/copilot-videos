@@ -198,3 +198,9 @@ a {
 .filter-btn:hover {
     background-color: #0056b3;
 }
+
+/* Styles for the 'active' class on filter buttons to change their background color when active */
+.filter-btn.active {
+    background-color: #ff4500; /* Change to a distinct color when active */
+    color: #ffffff;
+}
