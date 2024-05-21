@@ -52,18 +52,27 @@ document.addEventListener('DOMContentLoaded', function() {
             // Function to filter news items based on the selected feed
             function filterNews(feedName, clickedButton) {
                 const newsItems = document.querySelectorAll('.news-item');
-                newsItems.forEach(item => {
-                    if (item.querySelector('span').textContent === feedName) {
+                const isActive = clickedButton.classList.contains('active');
+                // Toggle active class on clicked button
+                clickedButton.classList.toggle('active');
+                if (isActive) {
+                    // If the button was already active, display all news items
+                    newsItems.forEach(item => {
                         item.style.display = '';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-                // Toggle active class on clicked button and remove from others
+                    });
+                } else {
+                    // Filter news items based on the selected feed
+                    newsItems.forEach(item => {
+                        if (item.querySelector('span').textContent === feedName) {
+                            item.style.display = '';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                }
+                // Ensure only the clicked button can be active at a time
                 document.querySelectorAll('.filter-btn').forEach(button => {
-                    if (button === clickedButton) {
-                        button.classList.add('active');
-                    } else {
+                    if (button !== clickedButton) {
                         button.classList.remove('active');
                     }
                 });
