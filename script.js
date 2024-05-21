@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const button = document.createElement('button');
                 button.textContent = feed.name;
                 button.className = 'filter-btn';
+                button.setAttribute('data-feed-name', feed.name); // Add a data attribute to store the exact feed name
                 button.addEventListener('click', function() {
                     filterNews(feed.name, this);
                 });
@@ -91,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         feedCounts[feed.name] = itemCount; // Update the count for the current feed
                         // Update button text to include the count of posts
                         document.querySelectorAll('.filter-btn').forEach(button => {
-                            if (button.textContent.includes(feed.name)) {
+                            if (button.getAttribute('data-feed-name') === feed.name) {
                                 button.textContent = `${feed.name} (${itemCount})`;
                             }
                         });
