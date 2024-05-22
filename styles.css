@@ -92,6 +92,7 @@ body {
     background: radial-gradient(circle, rgba(34,34,59,1) 0%, rgba(14,14,44,1) 35%, black 100%);
     color: white;
     max-width: 1200px;
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -281,4 +282,9 @@ a {
 
 #sku-container a:hover {
     background-color: #0056b3;
+}
+
+/* Styling for h1 elements to increase font size */
+h1 {
+    font-size: 32px;
 }
