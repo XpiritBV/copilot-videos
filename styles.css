@@ -24,6 +24,32 @@
     padding: 10px;
 }
 
+.grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    width: fit-content;
+}
+
+.box-grid {
+    flex: 1;
+    padding: 7px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-grid > div {
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    gap: 20px;
+    padding: 10px;
+    height: 50px;
+}
+
 /* Grid styling for both feature sections */
 .feature-grid {
     flex: 1;
@@ -203,4 +229,56 @@ a {
 .filter-btn.active {
     background-color: #ff4500; /* Change to a distinct color when active */
     color: #ffffff;
+}
+
+/* New styles for the section of 4 boxes in index.html */
+#container .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid purple;
+    transition: transform 0.3s ease;
+}
+ 
+#container .box a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#container .box:hover {
+    transform: scale(1.1);
+}
+
+/* Styling for the new skus.html page for consistency */
+#sku-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#sku-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#sku-container a:hover {
+    background-color: #0056b3;
 }
