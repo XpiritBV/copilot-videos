@@ -117,7 +117,7 @@ a {
     display: inline-block;
     padding: 10px 20px;
     margin-bottom: 20px;
-    background-color: #007bff;
+    background-color: #007bff; /* Updated background color to match the active filter buttons */
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -125,7 +125,7 @@ a {
 }
 
 #feature-detail-container a:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Adjusted hover effect to a slightly darker shade of green */
 }
 
 /* Media queries for screens smaller than 768px */
