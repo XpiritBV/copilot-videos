@@ -7,6 +7,12 @@
     flex-direction: row;
 }
 
+.back-button {
+    background-color: #0056b3;
+    padding: 16px;
+    margin: 7px;
+}
+
 .sku-grid {
     flex: 1;
     display: grid;
