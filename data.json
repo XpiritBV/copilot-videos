@@ -118,5 +118,22 @@
         "url": "https://github.blog/feed/?tag=github-copilot%2Cgithub-copilot-extensions%2Cgithub-copilot-chat"
       }
     ]
-  }
+  },
+  "tutorials": [
+    {
+      "title": "Getting Started with GitHub Copilot",
+      "description": "Learn how to activate and start using GitHub Copilot in your projects.",
+      "url": "https://youtube.com/getting-started"
+    },
+    {
+      "title": "Advanced Features of GitHub Copilot",
+      "description": "Dive deeper into the advanced features of GitHub Copilot and how to use them effectively.",
+      "url": "https://youtube.com/advanced-features"
+    },
+    {
+      "title": "GitHub Copilot for Teams",
+      "description": "Discover how GitHub Copilot can enhance collaboration and productivity in team environments.",
+      "url": "https://youtube.com/copilot-for-teams"
+    }
+  ]
 }
