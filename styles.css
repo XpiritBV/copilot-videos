@@ -1,3 +1,11 @@
+:root {
+    /* defines the background color of the buttons globally,
+    making it easier to modify in the future and reuse throughout the site */
+    --button-color: #007bff;
+    --hover-button-color: #0056b3;
+    
+}
+
 /* Main container styling */
 #main-container {
     display: flex;
@@ -7,10 +15,31 @@
     flex-direction: row;
 }
 
+/*
 .back-button {
     background-color: #0056b3;
     padding: 16px;
     margin: 7px;
+}
+*/
+
+.back-button {
+    /* this class will be used to make the buttons look all the same */
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    
+    color: white;
+    background-color: var(--button-color);
+
+    border-radius: 5px;
+    
+    text-decoration: none;
+
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: var( --hover-button-color);
 }
 
 .sku-grid {
