@@ -126,14 +126,14 @@
       "url": "https://youtube.com/getting-started"
     },
     {
-      "title": "Advanced Features of GitHub Copilot",
-      "description": "Dive deeper into the advanced features of GitHub Copilot and how to use them effectively.",
-      "url": "https://youtube.com/advanced-features"
+      "title": "GitHub Copilot Power User example",
+      "description": "In this post Rob takes you by the hand through refactoring a shell script out of a build pipeline into a separate file. He shows how to do this step by stap, including the additional checks and chat questions he is asking to get to the desired result.",
+      "url": "https://devopsjournal.io/blog/2024/06/05/GitHub-Copilot-Power-User"
     },
     {
-      "title": "GitHub Copilot for Teams",
-      "description": "Discover how GitHub Copilot can enhance collaboration and productivity in team environments.",
-      "url": "https://youtube.com/copilot-for-teams"
+      "title": "GitHub Copilot Debugging exprience in Visual Studio",
+      "description": "GitHub Copilot is a powerful integrations in Visual Studio that enhances the debugging experience. Read the blogpost and checkout the videos to learn more!",
+      "url": "https://devblogs.microsoft.com/visualstudio/simplified-code-refinement-and-debugging-with-github-copilot-chat/"
     }
   ]
 }
