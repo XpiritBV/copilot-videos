@@ -134,6 +134,11 @@
       "title": "GitHub Copilot Debugging exprience in Visual Studio",
       "description": "GitHub Copilot is a powerful integrations in Visual Studio that enhances the debugging experience. Read the blogpost and checkout the videos to learn more!",
       "url": "https://devblogs.microsoft.com/visualstudio/simplified-code-refinement-and-debugging-with-github-copilot-chat/"
+    },
+    {
+      "title": "GitHub Copilot Chat - Power user example",
+      "description": "Learn in an example how much more you can get out of GitHub Copilot Chat from this video from Rob Bos",
+      "url": "https://devopsjournal.io/blog/2024/06/19/GitHub-Copilot-Chat-Power-User"
     }
   ]
 }
