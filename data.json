@@ -121,9 +121,14 @@
   },
   "tutorials": [
     {
-      "title": "Getting Started with GitHub Copilot",
-      "description": "Learn how to activate and start using GitHub Copilot in your projects.",
-      "url": "https://youtube.com/getting-started"
+      "title": "Converting data into a different format",
+      "description": "Learn how to to leverage GitHub Copilot to help with data conversions.",
+      "url": "https://blog.jesseswart.nl/post/copilot-data-conversion"
+    },
+    {
+      "title": "How to consume an API without an OpenAPI spec",
+      "description": "Having no official specs to build your object model to communicate with an API can be hard. In this post Jesse shows how to make it easier to get the classes you need using GitHub Copilot",
+      "url": "https://blog.jesseswart.nl/post/consume-api-copilot"
     },
     {
       "title": "GitHub Copilot Power User example",
