@@ -121,6 +121,11 @@
   },
   "tutorials": [
     {
+      "title": "GitHub Copilot video series: Levels of Enlightenment",
+      "description": "Get more proficient using GitHub Copilot with the lessons learned from Rob. In this 10 part series he explains some of the lessons learned while using Copilot over the last year.",
+      "url": "https://www.youtube.com/playlist?list=PLXVVwOM8uv2y0Yo6H8qu9giWWWlZLzu8K"
+    },
+    {
       "title": "Converting data into a different format",
       "description": "Learn how to to leverage GitHub Copilot to help with data conversions.",
       "url": "https://blog.jesseswart.nl/post/copilot-data-conversion"
