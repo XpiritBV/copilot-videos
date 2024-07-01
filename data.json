@@ -116,6 +116,16 @@
       {
         "name": "Copilot Blog",
         "url": "https://github.blog/feed/?tag=github-copilot%2Cgithub-copilot-extensions%2Cgithub-copilot-chat"
+      },
+      {
+        "name": "Visual Studio - GitHub Copilot",
+        "url": "https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/",
+        "cors": true
+      },
+      {
+        "name": "Visual Studio - Copilot",
+        "url": "https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/",
+        "cors": true
       }
     ]
   },

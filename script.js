@@ -12,6 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const filterButtonsContainer = document.getElementById('filter-buttons');
             const feedCounts = {}; // Store the count of posts for each feed
             data.rssFeeds.feeds.forEach(feed => {
+                if (feed.cors) {
+                    // skip this feed for now, we cannot handle this with this script atm
+                    return;
+                }
                 feedCounts[feed.name] = 0; // Initialize count for each feed
                 const button = document.createElement('button');
                 button.textContent = feed.name;
@@ -75,6 +79,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const rssFeeds = data.rssFeeds.feeds;
             let totalItemCount = 0; // Initialize total item count
             rssFeeds.forEach(feed => {
+                if (feed.cors) {
+                    // skip this feed for now, we cannot handle this with this script atm
+                    return;
+                }
                 fetch(feed.url)
                     .then(response => response.text())
                     .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
