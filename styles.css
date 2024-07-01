@@ -369,7 +369,7 @@ h1 {
 
 #title-frame {
     position: absolute;
-    top: 113px;
+    top: 0;
     left: 0;
     width: 100%;
     font-weight: 700;
