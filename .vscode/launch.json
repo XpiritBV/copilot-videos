@@ -10,9 +10,8 @@
             "name": "Launch via NPM",
             "runtimeExecutable": "npm",
             "runtimeArgs": [
-                "start"
-            ],
-            "port": 9229
+                "watch"
+            ]
         }
     ]
 }

@@ -150,5 +150,54 @@
       "description": "Learn in an example how much more you can get out of GitHub Copilot Chat from this video from Rob Bos",
       "url": "https://devopsjournal.io/blog/2024/06/19/GitHub-Copilot-Chat-Power-User"
     }
-  ]
+  ],
+  "adventure": {
+    "levels": [
+      {
+        "title": "Explain what you want to achieve",
+        "description": "This video shows how changing the way you write my code helps me get more descriptive with GitHub Copilot so the suggestions you get out of it become a lot better!",
+        "videoUrl": "https://youtu.be/vdGW48mJgUA"
+      },
+      {
+        "title": "Know your context",
+        "description": "This video shows you how to think about the context GitHub Copilot uses and how to use that knowledge to get better results out of it!",
+        "videoUrl": "https://youtu.be/FlfgYQ9NCao"
+      },
+      {
+        "title": "Copy method calls as comments",
+        "description": "This video shows how changing the way you go from a method call to the method implementation speeds up creating code!",
+        "videoUrl": "https://youtu.be/tzwT4VcXhg8"
+      },
+      {
+        "title": "Top-down programming instead of bottom-up",
+        "description": "This video shows how thinking about the code implementation from top-down instead of bottom up helps me use GitHub Copilot in a better way!",
+        "videoUrl": "https://youtu.be/ispTBp9FfFY"
+      },
+      {
+        "title": "Typos in your prompt do not matter",
+        "description": "This video shows you to stop caring (to much) about typos in your prompt. Took a while to internalize that this is a good way to speed up your prompting!",
+        "videoUrl": "https://youtu.be/b_UG94dxD04"
+      },
+      {
+        "title": "Use the chat",
+        "description": "This video shows using the Chat functionality to your benefit: instead of relying on suggestions while you are typing most of the time, I have switched to use the Chat for most of the things, as that will get me faster results so I can focus on what I want to do, instead of creating the right syntax.",
+        "videoUrl": "https://youtu.be/iSPN97vtNzU"
+      },
+      {
+        "title": "#file is your biggest friend",
+        "description": "This video shows you how to get the most of of GitHub Copilot by being very descriptive with your prompts and to include specific context by using #file or #selection, instead of relying on the editor to guess what parts of your codebase are important.",
+        "videoUrl": "https://youtu.be/xVsfgeB4jQI"
+      },
+      {
+        "title": "Accept the truth",
+        "description": "This video shows about accepting the fact that Copilot is based on Large Language Models, which means it is both non-deterministic as well as not 100% correct. You remain the pilot and are driving the conversation, so you are also the professional guiding the code in a direction. It can take a while to get the code correct",
+        "videoUrl": "https://youtu.be/B7suezj2c9U"
+      },
+      {
+        "title": "Be smart",
+        "description": "This video explains that you need to be smart when using GitHub Copilot. Think of novel use cases and how to get more done by Copilot instead of writing the code yourself. Use it for exploration and finding new ways of doing things!",
+        "videoUrl": "https://youtu.be/FdLHeCxygFQ"
+      }
+    ]
+  }
 }
