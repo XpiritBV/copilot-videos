@@ -108,7 +108,7 @@
 
 .video-box {
     min-width: 120px; 
-    min-height: 100px; 
+    min-height: 125px; 
     text-align: center;
     border: 1px solid #6272a4; 
 }
@@ -423,7 +423,8 @@ h1 {
     justify-content: center;
     align-items: center;
     margin: 30px;
-    border: 3px solid white;
+    border: 3px solid #00ff00;
+    color: #00ff00;
     width: 90%; /* Assuming the iframe width */
     height: 500px; /* Assuming the iframe height, adjust as necessary */
     font-size: 24px; /* Bigger font to make the message stand out */
@@ -434,3 +435,8 @@ h1 {
     height: 100%;
     padding: 50px;
   }
+
+.coming-soon-small {
+    font-size: smaller;
+    color: #00ff00;   
+}
