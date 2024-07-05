@@ -25,6 +25,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     featureBox.addEventListener('click', () => {
                         window.location.href = `detail.html?videoId=${encodeURIComponent(item.id)}`;
                     });
+
+                    if (!item.videoUrl || item.videoUrl === "") {
+                        const comingSoonBanner = document.createElement('div');
+                        comingSoonBanner.id = 'coming-soon';
+                        comingSoonBanner.className = 'coming-soon-small';
+                        comingSoonBanner.innerHTML = '<div>Coming soon</div>';
+                        featureBox.appendChild(comingSoonBanner);
+                    }
                     featureGrid.appendChild(featureBox);
                 });
 
