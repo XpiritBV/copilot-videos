@@ -23,15 +23,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     featureBox.className = 'video-box';
                     featureBox.innerHTML = `<h3>${item.title}</h3>`;
                     featureBox.addEventListener('click', () => {
-                        window.location.href = `detail.html?title=${encodeURIComponent(item.title)}&videoUrl=${encodeURIComponent(item.videoUrl)}&description=${encodeURIComponent(item.description)}`;
-                        if (!item.videoUrl) {
-                            const comingSoonBanner = document.createElement('div');
-                            comingSoonBanner.id = 'coming-soon';
-                            comingSoonBanner.className = 'coming-soon';
-                            comingSoonBanner.innerHTML = '<div>Video coming Soon</div>';
-                            document.body.appendChild(comingSoonBanner);
-                        }
+                        window.location.href = `detail.html?title=${encodeURIComponent(item.title)}&videoUrl=${encodeURIComponent(item.videoUrl)}&description=${encodeURIComponent(item.description)}`;                        
                     });
+
+                    if (!item.videoUrl || item.videoUrl === "") {
+                        const comingSoonBanner = document.createElement('div');
+                        comingSoonBanner.id = 'coming-soon';
+                        comingSoonBanner.className = 'coming-soon-small';
+                        comingSoonBanner.innerHTML = '<div>Coming soon</div>';
+                        featureBox.appendChild(comingSoonBanner);
+                    }
                     featureGrid.appendChild(featureBox);
                 });
 
