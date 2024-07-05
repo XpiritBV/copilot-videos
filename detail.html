@@ -24,20 +24,36 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const params = new URLSearchParams(window.location.search);
-            const title = params.get('title');
-            const videoUrl = params.get('videoUrl');
-            const description = params.get('description');
+            const videoId = params.get('videoId');
 
-            document.getElementById('feature-title').textContent = decodeURIComponent(title);
-            if (videoUrl) {
-                document.getElementById('feature-video').src = decodeURIComponent(videoUrl).replace("youtube.com", "youtube.com/embed");
-                document.getElementById('feature-video').style.display = 'block';
-                document.getElementById('coming-soon').style.display = 'none';
-            } else {
-                document.getElementById('feature-video').style.display = 'none';
-                document.getElementById('coming-soon').style.display = 'block';
-            }
-            document.getElementById('feature-description').textContent = decodeURIComponent(description);
+            fetch('data.json')
+                .then(response => response.json())
+                .then(data => {
+                    let videoDetails;
+                    data.features.videos.forEach(feature => {
+                        feature.items.forEach(item => {
+                            if (item.id == videoId) {
+                                videoDetails = item;
+                            }
+                        });
+                    });
+
+                    if (videoDetails) {
+                        document.getElementById('feature-title').textContent = videoDetails.title;
+                        if (videoDetails.videoUrl) {
+                            document.getElementById('feature-video').src = videoDetails.videoUrl.replace("youtube.com", "youtube.com/embed");
+                            document.getElementById('feature-video').style.display = 'block';
+                            document.getElementById('coming-soon').style.display = 'none';
+                        } else {
+                            document.getElementById('feature-video').style.display = 'none';
+                            document.getElementById('coming-soon').style.display = 'block';
+                        }
+                        document.getElementById('feature-description').textContent = videoDetails.description;
+                    } else {
+                        console.error('Video details not found for videoId:', videoId);
+                    }
+                })
+                .catch(error => console.error('Error loading video details:', error));
         });
     </script>
 </body>

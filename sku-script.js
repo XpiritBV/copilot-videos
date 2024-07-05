@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     featureBox.className = 'video-box';
                     featureBox.innerHTML = `<h3>${item.title}</h3>`;
                     featureBox.addEventListener('click', () => {
-                        window.location.href = `detail.html?title=${encodeURIComponent(item.title)}&videoUrl=${encodeURIComponent(item.videoUrl)}&description=${encodeURIComponent(item.description)}`;
+                        window.location.href = `detail.html?videoId=${encodeURIComponent(item.id)}`;
                     });
                     featureGrid.appendChild(featureBox);
                 });
