@@ -411,9 +411,26 @@ h1 {
     position: absolute;
     display: none; /* Start hidden */
     background-color: white;
-    border: 1px solid black;
-    color: black;
-    padding: 5px;
+    border: 3px solid white;
+    color: white;
+    padding: 50px;
     z-index: 100; /* Ensure it's above the canvas */
     pointer-events: none; /* Allows mouse events to pass through to the canvas */
 }
+
+.coming-soon {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    border: 3px solid white;
+    width: 90%; /* Assuming the iframe width */
+    height: 500px; /* Assuming the iframe height, adjust as necessary */
+    font-size: 24px; /* Bigger font to make the message stand out */
+    font-weight: bold;
+  }
+
+  .coming-soon div {
+    height: 100%;
+    padding: 50px;
+  }

@@ -14,6 +14,9 @@
         <div id="video-container">
             <iframe id="feature-video" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
+        <div id="coming-soon" style="display: none;" class="coming-soon">
+            <div>Video coming Soon</div>
+        </div>
         <div id="description-container">
             <p id="feature-description">Feature Description</p>
         </div>
@@ -22,11 +25,18 @@
         document.addEventListener('DOMContentLoaded', function() {
             const params = new URLSearchParams(window.location.search);
             const title = params.get('title');
-            const videoUrl = params.get('videoUrl').replace("youtube.com", "youtube.com/embed");
+            const videoUrl = params.get('videoUrl');
             const description = params.get('description');
 
             document.getElementById('feature-title').textContent = decodeURIComponent(title);
-            document.getElementById('feature-video').src = decodeURIComponent(videoUrl);
+            if (videoUrl) {
+                document.getElementById('feature-video').src = decodeURIComponent(videoUrl).replace("youtube.com", "youtube.com/embed");
+                document.getElementById('feature-video').style.display = 'block';
+                document.getElementById('coming-soon').style.display = 'none';
+            } else {
+                document.getElementById('feature-video').style.display = 'none';
+                document.getElementById('coming-soon').style.display = 'block';
+            }
             document.getElementById('feature-description').textContent = decodeURIComponent(description);
         });
     </script>
