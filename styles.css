@@ -440,3 +440,14 @@ h1 {
     font-size: smaller;
     color: #00ff00;   
 }
+
+/* Media queries for vertical phone screens */
+@media (max-width: 820px) {
+    #game-container {
+        flex-direction: column;
+    }
+    #game-canvas {
+        width: 100%;
+        height: auto;
+    }
+}

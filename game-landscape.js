@@ -3,8 +3,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const ctx = canvas.getContext('2d');
     let levelsData = [];
 
-    canvas.width = 800;
-    canvas.height = 600;
+    function adjustCanvasSize() {
+        if (window.innerWidth <= 820) {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        } else {
+            canvas.width = 800;
+            canvas.height = 600;
+        }
+    }
+
+    adjustCanvasSize();
+    window.addEventListener('resize', adjustCanvasSize);
 
     function loadLevels() {
         fetch('data.json')
@@ -49,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const margin = 70; // Margin from both sides
             const maxX = canvas.width - (2 * margin); // Adjust maxX to leave a margin of 70 on both sides
             const maxY = canvas.height - margin; // Reserve some space at the bottom
-            const levelsPerRow = 4; // Number of levels before changing direction
+            const levelsPerRow = window.innerWidth <= 820 ? 2 : 4; // Number of levels before changing direction
             const numRows = Math.ceil(levelsData.length / levelsPerRow); // Total number of rows
             const deltaY = 1; // Additional vertical offset for each level
             // Adjust stepY to account for deltaY in the total height calculation
@@ -180,4 +190,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
     loadLevels();
 });
-
