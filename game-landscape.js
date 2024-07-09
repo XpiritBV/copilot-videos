@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function adjustCanvasSize() {
         if (window.innerWidth <= 820) {
             canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            canvas.height = window.innerHeight - 135; // Adjust based on the header height
         } else {
             canvas.width = 800;
             canvas.height = 600;
@@ -171,10 +171,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     tooltip.style.left = event.pageX + 'px';
                     tooltip.style.top = (event.pageY - 35) + 'px';
                     tooltip.style.display = 'block';
+                    tooltip.style.color = '#000000';
+                    tooltip.style.fontWeight = 'bold';
+                    tooltip.style.fontSize = '24px';
                     document.getElementById('tooltip').textContent = title;
                     break; // Exit loop once cursor change is applied
                 }
             }
+
             if (!cursorChanged) {
                 canvas.style.cursor = 'default';
                 document.getElementById('tooltip').textContent = ''; // Hide the tooltip when not hovering over a level
@@ -188,5 +192,13 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = `game-level.html?level=${levelIndex+1}`;
     }
 
+
     loadLevels();
+    window.addEventListener('resize', function() {
+        // Update canvas dimensions if necessary
+        adjustCanvasSize();
+        
+        // Redraw everything on the canvas
+        drawLandscape();
+    });
 });

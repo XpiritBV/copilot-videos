@@ -392,6 +392,8 @@ h1 {
 }
 
 #game-canvas {
+    position: absolute;
+    top: 135px;
     width: 800px;
     height: 600px;
     border: 5px solid #8B4513; /* Leathery brown border for the canvas */
