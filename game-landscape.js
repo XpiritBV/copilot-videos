@@ -3,8 +3,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const ctx = canvas.getContext('2d');
     let levelsData = [];
 
-    canvas.width = 800;
-    canvas.height = 600;
+    function adjustCanvasSize() {
+        if (window.innerWidth <= 820) {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight - 135; // Adjust based on the header height
+        } else {
+            canvas.width = 800;
+            canvas.height = 600;
+        }
+    }
+
+    adjustCanvasSize();
+    window.addEventListener('resize', adjustCanvasSize);
 
     function loadLevels() {
         fetch('data.json')
@@ -49,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const margin = 70; // Margin from both sides
             const maxX = canvas.width - (2 * margin); // Adjust maxX to leave a margin of 70 on both sides
             const maxY = canvas.height - margin; // Reserve some space at the bottom
-            const levelsPerRow = 4; // Number of levels before changing direction
+            const levelsPerRow = window.innerWidth <= 820 ? 2 : 4; // Number of levels before changing direction
             const numRows = Math.ceil(levelsData.length / levelsPerRow); // Total number of rows
             const deltaY = 1; // Additional vertical offset for each level
             // Adjust stepY to account for deltaY in the total height calculation
@@ -161,10 +171,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     tooltip.style.left = event.pageX + 'px';
                     tooltip.style.top = (event.pageY - 35) + 'px';
                     tooltip.style.display = 'block';
+                    tooltip.style.color = '#000000';
+                    tooltip.style.fontWeight = 'bold';
+                    tooltip.style.fontSize = '24px';
                     document.getElementById('tooltip').textContent = title;
                     break; // Exit loop once cursor change is applied
                 }
             }
+
             if (!cursorChanged) {
                 canvas.style.cursor = 'default';
                 document.getElementById('tooltip').textContent = ''; // Hide the tooltip when not hovering over a level
@@ -178,6 +192,13 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = `game-level.html?level=${levelIndex+1}`;
     }
 
-    loadLevels();
-});
 
+    loadLevels();
+    window.addEventListener('resize', function() {
+        // Update canvas dimensions if necessary
+        adjustCanvasSize();
+        
+        // Redraw everything on the canvas
+        drawLandscape();
+    });
+});
