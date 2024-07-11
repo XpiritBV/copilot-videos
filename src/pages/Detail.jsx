@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import '../styles.css';
 
 const Detail = () => {
   const { videoId } = useParams();
   const [videoDetails, setVideoDetails] = useState(null);
-  const history = useHistory();
+  const history = useNavigate();
 
   useEffect(() => {
     fetch('/data.json')
@@ -39,7 +39,6 @@ const Detail = () => {
             width="560"
             height="315"
             src={videoDetails.videoUrl.replace("youtube.com", "youtube.com/embed")}
-            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
