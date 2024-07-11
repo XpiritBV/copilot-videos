@@ -7,10 +7,11 @@ import GameLevel from './pages/GameLevel';
 import Skus from './pages/Skus';
 import Tutorials from './pages/Tutorials';
 import './styles.css';
+import basename from '../react-config';
 
 function App() {
   return (
-    <Router>
+    <Router basename={basename}>
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/detail" element={<Detail />} />
