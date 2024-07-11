@@ -11,4 +11,7 @@ export default defineConfig({
     outDir: 'dist',
   },
   publicDir: 'public',
+  define: {
+    'process.env.BUILDNUMBER': JSON.stringify(process.env.BUILDNUMBER) || 999,
+  }
 });
