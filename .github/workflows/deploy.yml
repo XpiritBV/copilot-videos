@@ -3,6 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
 
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,6 +23,11 @@ jobs:
 
       - name: Build project
         run: npm run build
+
+      - name: Listfiles
+        run: |
+          cd dist
+          ls -la
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
