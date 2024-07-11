@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import '../styles.css';
-import basename from '../../react-config';
+import getData from '../utils/getData';
 
 const Tutorials = () => {
   const [tutorials, setTutorials] = useState([]);
 
   useEffect(() => {
-    fetch(`${basename}data.json`)
-      .then(response => response.json())
+    getData()
       .then(data => setTutorials(data.tutorials))
       .catch(error => console.error('Error loading tutorials:', error));
   }, []);
