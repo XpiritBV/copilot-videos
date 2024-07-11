@@ -13,16 +13,17 @@
             #game-canvas {
                 width: 100%;
                 height: auto;
-                position: absolute;
-                top: 135px;
             }
         }
     </style>
     <script defer data-domain="github-copilot.xebia.ms" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
-    <div id="game-container">
+    <div id="top">
+        <a href="javascript:history.back()" class="back-button">Back</a>
         <div id="title-frame">Levels of Enlightenment</div>
+    </div>
+    <div id="game-container">
         <canvas id="game-canvas"></canvas>
         <div id="tooltip" style="display: none;">Tooltip Text</div>
     </div>
