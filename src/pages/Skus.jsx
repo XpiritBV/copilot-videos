@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../styles.css';
 import getData from '../utils/getData';
 
 const Skus = () => {
   const [features, setFeatures] = useState({ business: [], enterprise: [] });
+
+  const navigate = useNavigate();
+
+  const handleClick = (id) => {
+    // navigate to the video with the given id
+    navigate(`/detail?videoId=${id}`);
+  };
 
   useEffect(() => {
     getData()
@@ -22,17 +29,19 @@ const Skus = () => {
       <div id="main-container">
         <div id="business-features" className="sku-grid">
           <h2>GitHub Copilot Business</h2>
-          {features.business.map(item => (
-            <div key={item.id} className="video-box" onClick={() => window.location.href = `/detail?videoId=${item.id}`}>
-              <h3>{item.title}</h3>
-              {!item.videoUrl && <div className="coming-soon-small">Coming soon</div>}
-            </div>
-          ))}
+          {            
+            features.business.map(item => (
+              <div key={item.id} className="video-box" onClick={handleClick(item.id)}>
+                <h3>{item.title}</h3>
+                {!item.videoUrl && <div className="coming-soon-small">Coming soon</div>}
+              </div>
+            ))
+          }
         </div>
         <div id="enterprise-features" className="sku-grid">
           <h2>GitHub Copilot Enterprise</h2>
           {features.enterprise.map(item => (
-            <div key={item.id} className="video-box" onClick={() => window.location.href = `/detail?videoId=${item.id}`}>
+            <div key={item.id} className="video-box" onClick={handleClick(item.id)}>
               <h3>{item.title}</h3>
               {!item.videoUrl && <div className="coming-soon-small">Coming soon</div>}
             </div>
