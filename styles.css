@@ -368,18 +368,26 @@ h1 {
 }
 
 #title-frame {
-    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 80%;
     font-weight: 700;
     font-size: xxx-large;
+    float: left;
     color: white;
     text-align: center;
     padding: 10px 0;
     z-index: 10; /* Ensure it's above the canvas */
 }
 
+#top {
+    height: 72px;
+    width: 100%;
+}
+
+#top a {
+    float: left
+}
 /* Styles specific to the game landscape interface */
 #game-container {
     display: flex;
@@ -392,8 +400,6 @@ h1 {
 }
 
 #game-canvas {
-    position: absolute;
-    top: 135px;
     width: 800px;
     height: 600px;
     border: 5px solid #8B4513; /* Leathery brown border for the canvas */
