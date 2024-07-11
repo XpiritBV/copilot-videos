@@ -33,7 +33,7 @@ const Skus = () => {
             <h2>GitHub Copilot Business</h2>
           </div>
           <div id="business-features" className="sku-grid">
-          {            
+          {
             features.business.map(item => (
               <div key={item.id} className="video-box" onClick={() => handleClick(item.id)}>
                 <h3>{item.title}</h3>

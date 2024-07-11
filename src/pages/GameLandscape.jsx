@@ -190,10 +190,10 @@ const GameLandscape = () => {
     });
   }, []);
 
-  return (    
+  return (
     <div>
       <Header title={`Levels of Enlightenment ${basename}`} />
-      <div id="game-container">        
+      <div id="game-container">
         <canvas id="game-canvas" ref={canvasRef}></canvas>
         <div id="tooltip" style={{ display: 'none' }}>Tooltip Text</div>
       </div>
