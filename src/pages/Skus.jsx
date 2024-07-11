@@ -31,7 +31,7 @@ const Skus = () => {
           <h2>GitHub Copilot Business</h2>
           {            
             features.business.map(item => (
-              <div key={item.id} className="video-box" onClick={handleClick(item.id)}>
+              <div key={item.id} className="video-box" onClick={() => handleClick(item.id)}>
                 <h3>{item.title}</h3>
                 {!item.videoUrl && <div className="coming-soon-small">Coming soon</div>}
               </div>
@@ -41,7 +41,7 @@ const Skus = () => {
         <div id="enterprise-features" className="sku-grid">
           <h2>GitHub Copilot Enterprise</h2>
           {features.enterprise.map(item => (
-            <div key={item.id} className="video-box" onClick={handleClick(item.id)}>
+            <div key={item.id} className="video-box" onClick={() => handleClick(item.id)}>
               <h3>{item.title}</h3>
               {!item.videoUrl && <div className="coming-soon-small">Coming soon</div>}
             </div>
