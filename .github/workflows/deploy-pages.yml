@@ -43,7 +43,8 @@ jobs:
         run: |
           export NODE_ENV='github-pages'
           export REPO_NAME="$(echo $GITHUB_REPOSITORY | cut -d'/' -f2)"
-          echo "Building [$REPO_NAME]"
+          export BUILDNUMBER="$(echo $GITHUB_RUN_NUMBER)"
+          echo "Building in repo [$REPO_NAME] with build number [$BUILDNUMBER] for [$NODE_ENV] environment."
           npm run build
 
       - name: Listfiles
