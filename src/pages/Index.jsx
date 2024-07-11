@@ -18,7 +18,6 @@ const Index = () => {
           </div>
           <div className="box">
             <img src="/copilot.jfif" alt="Logo of a pilot with a headset and a leather jacket" style={{ width: '100px', height: 'auto' }} />
-            <p>Build: {process.env.BUILDNUMBER}</p>
           </div>
         </div>
       </div>
@@ -26,6 +25,10 @@ const Index = () => {
         <h2>Copilot News</h2>
         <div id="filter-buttons"></div>
         <div id="news-content"></div>
+      </div>
+      <div id="footer">
+        <p>Build: {process.env.BUILDNUMBER}</p>
+        <p>NODE_ENV: {process.env.NODE_ENV}</p>
       </div>
     </div>
   );
