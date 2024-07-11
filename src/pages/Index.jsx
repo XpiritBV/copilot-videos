@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import '../styles.css';
 
 const Index = () => {
   return (
+    <Router basename={process.env.NODE_ENV === 'github-pages' ? '/copilot-videos' : '/'}>
     <div>
       <div className="grid-container">
         <div id="container" className="box-grid">
@@ -27,6 +28,7 @@ const Index = () => {
         <div id="news-content"></div>
       </div>
     </div>
+    </Router>
   );
 };
 
