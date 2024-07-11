@@ -13,6 +13,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Index />} />
+        <Route path="/copilot-videos" element={<Index />} />
         <Route path="/detail" element={<Detail />} />
         <Route path="/game-landscape" element={<GameLandscape />} />
         <Route path="/game-level" element={<GameLevel />} />
