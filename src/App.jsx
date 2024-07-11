@@ -10,7 +10,7 @@ import './styles.css';
 
 function App() {
   return (
-    <Router basename={process.env.NODE_ENV === 'github-pages' ? '/copilot-videos' : '/'}>
+    <Router basename={process.env.NODE_ENV === 'github-pages' ? '/copilot-videos/' : '/'}>
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/copilot-videos" element={<Index />} />
