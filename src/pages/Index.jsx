@@ -17,7 +17,7 @@ const Index = () => {
             <Link to="/tutorials">Tutorials</Link>
           </div>
           <div className="box">
-            <img src="2f8fc057-cb77-46af-8739-09295749e790.jfif" alt="Logo of a pilot with a headset and a leather jacket" style={{ width: '100px', height: 'auto' }} />
+            <img src="/copilot.jfif" alt="Logo of a pilot with a headset and a leather jacket" style={{ width: '100px', height: 'auto' }} />
           </div>
         </div>
       </div>
