@@ -13,5 +13,6 @@ export default defineConfig({
   publicDir: 'public',
   define: {
     'process.env.BUILDNUMBER': JSON.stringify(process.env.BUILDNUMBER) || 999,
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
   }
 });
