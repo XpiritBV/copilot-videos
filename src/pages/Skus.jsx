@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles.css';
+import getData from '../utils/getData';
 
 const Skus = () => {
   const [features, setFeatures] = useState({ business: [], enterprise: [] });
 
   useEffect(() => {
-    fetch('/data.json')
-      .then(response => response.json())
+    getData()
       .then(data => {
         const business = data.features.videos.find(feature => feature.sku === "GitHub Copilot Business");
         const enterprise = data.features.videos.find(feature => feature.sku === "GitHub Copilot Enterprise");

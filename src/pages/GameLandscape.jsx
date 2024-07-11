@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import '../styles.css';
+import getData from '../utils/getData';
 
 const GameLandscape = () => {
   const canvasRef = useRef(null);
@@ -23,8 +24,7 @@ const GameLandscape = () => {
     window.addEventListener('resize', adjustCanvasSize);
 
     function loadLevels() {
-      fetch('/data.json')
-        .then(response => response.json())
+      getData()
         .then(data => {
           levelsData = data.adventure.levels;
           drawLandscape();

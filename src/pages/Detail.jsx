@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../styles.css';
+import getData from '../utils/getData';
 
 const Detail = () => {
   const { videoId } = useParams();
@@ -8,8 +9,7 @@ const Detail = () => {
   const history = useNavigate();
 
   useEffect(() => {
-    fetch('/data.json')
-      .then(response => response.json())
+    getData()
       .then(data => {
         let details;
         data.features.videos.forEach(feature => {

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../styles.css';
+import getData from '../utils/getData';
 
 const GameLevel = () => {
   const [level, setLevel] = useState(null);
@@ -10,8 +11,7 @@ const GameLevel = () => {
     let levelIndex = queryParams.get('level');
     levelIndex = parseInt(levelIndex) - 1;
 
-    fetch('/data.json')
-      .then(response => response.json())
+    getData()
       .then(data => {
         if (levelIndex < 0 || levelIndex >= data.adventure.levels.length) {
           console.log('Invalid level index');
