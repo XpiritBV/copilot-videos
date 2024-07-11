@@ -11,7 +11,8 @@ const getData = async () => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
-        return await response.json();
+        cachedData = await response.json();
+        return cachedData;
     } catch (error) {
         console.error('Fetch error:', error);
         throw error;
