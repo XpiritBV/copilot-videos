@@ -6,7 +6,19 @@
     <title>GitHub Copilot Updates</title>
   </head>
   <body>
+    <h1>My App</h1>
+    <h2 id="header">Post Path: {PATH}</h2>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <script>
+      if (window.location.hash.length > 1) {
+        const path = window.location.hash.replace('#', '')
+        history.pushState({ page: 1 }, "Some title", '/copilot-videos' + path)
+  
+        document.getElementById('header').innerHTML = document.getElementById('header').innerHTML.replace('{PATH}', path)
+      }
+    </script>
   </body>
 </html>
