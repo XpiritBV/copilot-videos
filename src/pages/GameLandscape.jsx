@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles.css';
 import getData from '../utils/getData';
 
@@ -183,12 +184,14 @@ const GameLandscape = () => {
     });
   }, []);
 
-  return (
-    <div id="game-container">
-      <a href="javascript:history.back()" className="back-button">Back</a>
-      <div id="title-frame">Levels of Enlightenment</div>
-      <canvas id="game-canvas" ref={canvasRef}></canvas>
-      <div id="tooltip" style={{ display: 'none' }}>Tooltip Text</div>
+  return (    
+    <div>
+      <Link to="/" className="back-button">Back to Home</Link>
+      <div id="game-container">        
+        <div id="title-frame">Levels of Enlightenment</div>
+        <canvas id="game-canvas" ref={canvasRef}></canvas>
+        <div id="tooltip" style={{ display: 'none' }}>Tooltip Text</div>
+      </div>
     </div>
   );
 };

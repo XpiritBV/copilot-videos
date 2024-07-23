@@ -19,6 +19,8 @@
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    margin-top: 3px;
+    display: inline-block;
 }
 
 .back-button:hover {

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles.css';
 import getData from '../utils/getData';
 
@@ -38,24 +39,26 @@ const GameLevel = () => {
   }
 
   return (
-    <div id="feature-detail-container" style={{ textAlign: 'center' }}>
-      <a href="javascript:history.back()" style={{ display: 'inline-block', marginBottom: '20px' }}>Back</a>
-      <h1 id="feature-title">Level {level.title}</h1>
-      <div id="video-container">
-        <iframe
-          id="feature-video"
-          width="900"
-          height="544"
-          src={videoUrl}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-      </div>
-      <div id="description-container">
-        <p id="feature-description" style={{ fontSize: 'xx-large', maxWidth: '900px' }}>
-          {level.description}
-        </p>
+    <div>
+      <Link to="/" className="back-button">Back to Home</Link>
+      <div id="feature-detail-container" style={{ textAlign: 'center' }}>
+        <h1 id="feature-title">Level {level.title}</h1>
+        <div id="video-container">
+          <iframe
+            id="feature-video"
+            width="900"
+            height="544"
+            src={videoUrl}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+        <div id="description-container">
+          <p id="feature-description" style={{ fontSize: 'xx-large', maxWidth: '900px' }}>
+            {level.description}
+          </p>
+        </div>
       </div>
     </div>
   );
