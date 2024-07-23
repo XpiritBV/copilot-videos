@@ -6,8 +6,9 @@
     <script>
       // Redirect to the correct URL
       var pathname = window.location.pathname;
+      alert (pathname);
       var basePath = '/copilot-videos';
-      if (pathname !== basePath && !pathname.startsWith(basePath + '/')) {
+      if (!pathname.startsWith(basePath + '/')) {
         window.location.replace(basePath + pathname);
       }
     </script>
