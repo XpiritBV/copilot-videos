@@ -6,11 +6,9 @@
     <script>
       // Redirect to the correct URL
       var pathname = window.location.pathname;
-      alert (pathname);
-      var basePath = '/copilot-videos';
-      if (!pathname.startsWith(basePath + '/')) {
-        window.location.replace(basePath + pathname);
-      }
+      
+      // todo: rewrite when on prod
+      window.location.href = 'copilot-videos/#' + window.location.pathname.replace('/copilot-videos', '')
     </script>
   </head>
   <body>
