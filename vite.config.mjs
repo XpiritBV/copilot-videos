@@ -1,10 +1,10 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import basename from './react-config';
+import rewriteAll from 'vite-plugin-rewrite-all';
 
-// Determine the base path based on the environment
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), rewriteAll()],
   base: basename,
   build: {
     outDir: 'dist',
