@@ -13,14 +13,12 @@
     <script>
       if (window.location.hash.length > 1) {
         var basePath = window.location.pathname;
-        console.log(`basePath is: ` + basePath); 
         // remove the last / from the basePath if it exists
         if (basePath.endsWith('/')) {
           basePath = basePath.slice(0, -1);
         }
-
         const path = window.location.hash.replace('#', '')
-        console.log(`redirecting to: ` + basePath + path);
+
         // pushing the state to the history so that the back button works
         // will also make sure that the correct URL is shown in the address bar
         // and the correct content is rendered
