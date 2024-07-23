@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import '../styles.css';
 import getData from '../utils/getData';
 import Header from './title-header';
+import basename from '../../react-config';
 
 const GameLandscape = () => {
   const canvasRef = useRef(null);
@@ -174,7 +175,12 @@ const GameLandscape = () => {
     }
 
     function displayLevelInfo(levelIndex) {
-      window.location.href = `/game-level?level=${levelIndex + 1}`;
+      const redirect = basename;
+      if (basename === "/") {
+        window.location.href = `${redirect}game-level?level=${levelIndex + 1}`;
+      } else {
+        window.location.href = `${basename}/game-level?level=${levelIndex + 1}`;
+      }
     }
 
     loadLevels();
@@ -186,7 +192,7 @@ const GameLandscape = () => {
 
   return (    
     <div>
-      <Header title="Levels of Enlightenment" />
+      <Header title={`Levels of Enlightenment ${basename}`} />
       <div id="game-container">        
         <canvas id="game-canvas" ref={canvasRef}></canvas>
         <div id="tooltip" style={{ display: 'none' }}>Tooltip Text</div>
