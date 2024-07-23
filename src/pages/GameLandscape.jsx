@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import '../styles.css';
 import getData from '../utils/getData';
+import Header from './title-header';
 
 const GameLandscape = () => {
   const canvasRef = useRef(null);
@@ -186,9 +186,8 @@ const GameLandscape = () => {
 
   return (    
     <div>
-      <Link to="/" className="back-button">Back to Home</Link>
+      <Header title="Levels of Enlightenment" />
       <div id="game-container">        
-        <div id="title-frame">Levels of Enlightenment</div>
         <canvas id="game-canvas" ref={canvasRef}></canvas>
         <div id="tooltip" style={{ display: 'none' }}>Tooltip Text</div>
       </div>

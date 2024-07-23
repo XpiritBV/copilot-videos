@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../styles.css';
 import getData from '../utils/getData';
+import Header from './title-header';
 
 const Skus = () => {
   const [features, setFeatures] = useState({ business: [], enterprise: [] });
@@ -25,7 +26,7 @@ const Skus = () => {
 
   return (
     <div>
-      <Link to="/" className="back-button">Back to Home</Link>
+      <Header title={`GitHub Copilot Business vs Enterprise`}/>
       <div id="main-container">
         <div id="business-features" className="sku-grid">
           <h2>GitHub Copilot Business</h2>

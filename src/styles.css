@@ -429,3 +429,22 @@ h1 {
         height: auto;
     }
 }
+
+.titleHeader {
+    display: block;
+}
+
+.titleHeader a {
+    display: inline-block;
+    margin-right: 7px;
+}
+
+.titleHeader div {
+    display: inline-block;
+    margin-left: 7px;
+    width: 70%;
+}
+
+.titleHeader div h2 {
+    text-align: center;
+}

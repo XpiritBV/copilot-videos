@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import '../styles.css';
 import getData from '../utils/getData';
+import Header from './title-header';
 
 const GameLevel = () => {
   const [level, setLevel] = useState(null);
@@ -40,9 +40,9 @@ const GameLevel = () => {
 
   return (
     <div>
-      <Link to="/" className="back-button">Back to Home</Link>
+      <Header title={`Level ${level.level}: ${level.title}`}/>
+
       <div id="feature-detail-container" style={{ textAlign: 'center' }}>
-        <h1 id="feature-title">Level {level.title}</h1>
         <div id="video-container">
           <iframe
             id="feature-video"

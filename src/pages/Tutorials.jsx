@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import '../styles.css';
 import getData from '../utils/getData';
+import Header from './title-header';
 
 const Tutorials = () => {
   const [tutorials, setTutorials] = useState([]);
@@ -14,8 +14,7 @@ const Tutorials = () => {
 
   return (
     <div>
-      <Link to="/" className="back-button">Back to Home</Link>
-      <div><h2 id="title">GitHub Copilot - Tutorials</h2></div>
+      <Header title="GitHub Copilot - Tutorials" />
       <div className="grid-container">
         <div id="tutorial-container">
           <div id="tutorials-list">
