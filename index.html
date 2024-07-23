@@ -1,3 +1,4 @@
+<!-- public/index.html.template -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,7 +12,7 @@
 
     <script>
       if (window.location.hash.length > 1) {
-        var basePath = import.meta.env.VITE_BASE_PATH;
+        var basePath = window.location.pathname;
         console.log(`basePath is: ` + basePath); 
         // remove the last / from the basePath if it exists
         if (basePath.endsWith('/')) {
