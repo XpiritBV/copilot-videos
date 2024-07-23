@@ -5,7 +5,11 @@
     <meta http-equiv="refresh" content="0; url=/" />
     <script>
       // Redirect to the correct URL
-      this is the 404 page
+      var pathname = window.location.pathname;
+      var basePath = '/copilot-videos';
+      if (pathname !== basePath && !pathname.startsWith(basePath + '/')) {
+        window.location.replace(basePath + pathname);
+      }
     </script>
   </head>
   <body>
