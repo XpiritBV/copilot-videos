@@ -11,6 +11,11 @@
     flex-direction: row;
 }
 
+#main-container h2 {
+    text-align: center;
+    width: 100%;
+}
+
 .back-button {
     padding: 10px 20px;
     margin-bottom: 20px;
@@ -35,6 +40,7 @@
     border: none;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .sku-grid > div {
@@ -447,4 +453,16 @@ h1 {
 
 .titleHeader div h2 {
     text-align: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 6px;
+    width: 100%;
+}
+
+.footer div {
+    margin-right: 7px;
 }
