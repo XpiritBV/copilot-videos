@@ -2,14 +2,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!--meta http-equiv="refresh" content="0; url=/" /-->
     <script>
       // Redirect to the correct URL
       var pathname = window.location.pathname;
+      var search = window.location.search;
       
-      // todo: rewrite when on prod
-      const url = '/copilot-videos/#' + window.location.pathname.replace('/copilot-videos', '');
-      window.location.href = url
+      // Construct the new URL
+      const basePath = '/copilot-videos/#' + pathname.replace('/copilot-videos', '');
+      const url = search ? basePath + search : basePath;
+      
+      // Redirect to the new URL
+      window.location.href = url;
     </script>
   </head>
   <body>
