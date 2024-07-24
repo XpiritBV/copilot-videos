@@ -7,8 +7,13 @@
       var pathname = window.location.pathname;
       var search = window.location.search;
       
+      // Remove leading slash from pathname if it exists
+      if (pathname.startsWith('/')) {
+        pathname = pathname.substring(1);
+      }
+      
       // Construct the new URL
-      const basePath = '/copilot-videos/#' + pathname.replace('/copilot-videos', '');
+      const basePath = '/copilot-videos/#' + pathname.replace('copilot-videos', '');
       const url = search ? basePath + search : basePath;
       
       // Redirect to the new URL
