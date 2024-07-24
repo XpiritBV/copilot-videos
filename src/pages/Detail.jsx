@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import '../styles.css';
 import getData from '../utils/getData';
 
+const useQuery = () => {
+  return new URLSearchParams(useLocation().search);
+};
+
 const Detail = () => {
-  const { videoId } = useParams();
+//  const { videoId } = useParams();
   const [videoDetails, setVideoDetails] = useState(null);
-  const history = useNavigate();
+  
+  const query = useQuery();
+  const videoId = query.get('videoId');
 
   useEffect(() => {
     getData()
@@ -19,13 +25,16 @@ const Detail = () => {
             }
           });
         });
+        if (!details) {
+          throw new Error(`Video with id [${videoId}] not found`);
+        }
         setVideoDetails(details);
       })
       .catch(error => console.error('Error loading video details:', error));
   }, [videoId]);
 
   if (!videoDetails) {
-    return <div>Loading...</div>;
+    return <div>Could not load video information</div>;
   }
 
   return (
