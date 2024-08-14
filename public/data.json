@@ -5,6 +5,12 @@
               "sku": "GitHub Copilot Business",
               "items": [
                 {
+                  "id": 0,
+                  "title": "Demo introduction",
+                  "videoUrl": "https://youtu.be/AXP0bGCYrhM",
+                  "description": "Explainer of the demo repo we use in the videos."
+                },
+                {
                   "id": 1,
                   "title": "Code completions",
                   "videoUrl": "",
