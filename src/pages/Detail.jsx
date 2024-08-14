@@ -41,13 +41,18 @@ const Detail = () => {
     <div id="feature-detail-container" style={{ textAlign: 'center' }}>
       <a href="javascript:history.back()" style={{ display: 'inline-block', marginBottom: '20px' }}>Back</a>
       <h1 id="feature-title">{videoDetails.title}</h1>
-      <div id="video-container">
+           <div id="video-container">
         {videoDetails.videoUrl ? (
           <iframe
             id="feature-video"
             width="560"
             height="315"
-            src={videoDetails.videoUrl.replace("youtube.com", "youtube.com/embed")}
+            src={
+              // handle both youtu.be and youtube.com URLs to embed the video correctly
+              videoDetails.videoUrl.includes("youtu.be")
+                ? videoDetails.videoUrl.replace("youtu.be", "youtube.com/embed")
+                : videoDetails.videoUrl.replace("youtube.com", "youtube.com/embed")
+            }
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
