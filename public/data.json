@@ -6,7 +6,7 @@
               "items": [
                 {
                   "id": 0,
-                  "title": "Demo introduction",
+                  "title": "Intro video for demos",
                   "videoUrl": "https://youtu.be/AXP0bGCYrhM",
                   "description": "Explainer of the demo repo we use in the videos."
                 },
@@ -82,7 +82,7 @@
                   "videoUrl": "",
                   "description": "Enhance your coding workflow with Copilot's slash commands."
                 },
-                {                  
+                {
                   "id": 20,
                   "title": "User Instructions",
                   "videoUrl": "https://youtu.be/IsEXdeTbi1I",
