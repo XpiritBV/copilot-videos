@@ -18,8 +18,13 @@
       if (basePath.includes('//')) {
         basePath = basePath.replace('//', '/');
       }
-      // Vuild the new URL
+      // log the parts for debugging
+      console.log(`search: ${search}`);
+      console.log(`pathname: ${basePath}`);
+      
+      // Build the new URL
       const url = search ? basePath + search : basePath;
+      console.log(`redirecting to url: ${url}`);
       
       // Redirect to the new URL
       window.location.href = url;
