@@ -13,7 +13,7 @@
       }
       
       // Construct the new URL
-      const basePath = '/copilot-videos/#' + pathname.replace('copilot-videos', '');
+      let basePath = '/copilot-videos/#' + pathname.replace('copilot-videos', '');
       // If there are double slashes anywhere in the url, remove one
       if (basePath.includes('//')) {
         basePath = basePath.replace('//', '/');
