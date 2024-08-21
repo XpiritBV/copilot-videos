@@ -8,6 +8,7 @@ import Skus from './pages/Skus';
 import Tutorials from './pages/Tutorials';
 import './styles.css';
 import basename from '../react-config';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -15,10 +16,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/detail" element={<Detail />} />
-        <Route path="/game-landscape" element={<GameLandscape />} />
-        <Route path="/game-level" element={<GameLevel />} />
+        <Route path="/gamelandscape" element={<GameLandscape />} />
+        <Route path="/gamelevel" element={<GameLevel />} />
         <Route path="/skus" element={<Skus />} />
-        <Route path="/tutorials" element={<Tutorials />} />
+        <Route path="/tutorials" element={<Tutorials />} /> 
+        {/* Add a catch-all route for 404 */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

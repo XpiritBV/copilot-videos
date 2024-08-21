@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles.css';
 import getData from '../utils/getData';
 import Header from './title-header';
@@ -6,6 +7,7 @@ import basename from '../../react-config';
 
 const GameLandscape = () => {
   const canvasRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -176,11 +178,8 @@ const GameLandscape = () => {
 
     function displayLevelInfo(levelIndex) {
       const redirect = basename;
-      if (basename === "/") {
-        window.location.href = `${redirect}game-level?level=${levelIndex + 1}`;
-      } else {
-        window.location.href = `${basename}/game-level?level=${levelIndex + 1}`;
-      }
+      console.log(`displayLevelInfo basename: ${basename}`);
+      navigate(`/gamelevel?level=${levelIndex}`);
     }
 
     loadLevels();
@@ -190,10 +189,10 @@ const GameLandscape = () => {
     });
   }, []);
 
-  return (    
+  return (
     <div>
       <Header title={`Levels of Enlightenment ${basename}`} />
-      <div id="game-container">        
+      <div id="game-container">
         <canvas id="game-canvas" ref={canvasRef}></canvas>
         <div id="tooltip" style={{ display: 'none' }}>Tooltip Text</div>
       </div>

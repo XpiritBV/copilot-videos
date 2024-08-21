@@ -2,33 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script>
-      // Redirect to the correct URL
-      var pathname = window.location.pathname;
-      var search = window.location.search;
-      
-      // Remove leading slash from pathname if it exists
-      if (pathname.startsWith('/')) {
-        pathname = pathname.substring(1);
-      }
-      
-      // Construct the new URL
-      let basePath = '/copilot-videos/#' + pathname.replace('copilot-videos', '');
-      // If there are double slashes anywhere in the url, remove one
-      if (basePath.includes('//')) {
-        basePath = basePath.replace('//', '/');
-      }
-      // log the parts for debugging
-      console.log(`search: ${search}`);
-      console.log(`pathname: ${basePath}`);
-      
-      // Build the new URL
-      const url = search ? basePath + search : basePath;
-      console.log(`redirecting to url: ${url}`);
-      
-      // Redirect to the new URL
-      window.location.href = url;
-    </script>
+    <meta http-equiv="refresh" content="0; URL=/#/404" />
   </head>
   <body>
   </body>

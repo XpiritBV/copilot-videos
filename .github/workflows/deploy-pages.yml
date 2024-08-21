@@ -41,8 +41,10 @@ jobs:
         run: npm ci
 
       - name: Build project
+        env:
+          NODE_ENV: ${{ vars.NODE_ENV }} # use the vars to indicate the env that is uesd in the react-config.js to set the base url / folder
         run: |
-          export NODE_ENV='github-pages'
+          export NODE_ENV=$NODE_ENV
           export REPO_NAME="$(echo $GITHUB_REPOSITORY | cut -d'/' -f2)"
           export BUILDNUMBER="$(echo $GITHUB_RUN_NUMBER)"
           echo "Building in repo [$REPO_NAME] with build number [$BUILDNUMBER] for [$NODE_ENV] environment."
@@ -60,7 +62,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
-          
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

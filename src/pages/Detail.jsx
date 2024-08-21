@@ -10,7 +10,7 @@ const useQuery = () => {
 const Detail = () => {
 //  const { videoId } = useParams();
   const [videoDetails, setVideoDetails] = useState(null);
-  
+
   const query = useQuery();
   const videoId = query.get('videoId');
 

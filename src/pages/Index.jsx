@@ -128,7 +128,7 @@ const Index = () => {
             <Link to="/skus">Copilot Business vs Enterprise</Link>
           </div>
           <div className="box">
-            <Link to="/game-landscape">Levels of Enlightenment</Link>
+            <Link to="/gamelandscape">Levels of Enlightenment</Link>
           </div>
           <div className="box">
             <Link to="/tutorials">Tutorials</Link>
