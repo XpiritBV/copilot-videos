@@ -12,7 +12,7 @@
       ]
     }
   },
-  "forwardPorts": [8080],
+  "forwardPorts": [5173],
   "postCreateCommand": "npm install",
   "remoteUser": "node"
 }

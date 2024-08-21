@@ -1,45 +1,35 @@
 :root {
-    /* defines the background color of the buttons globally,
-    making it easier to modify in the future and reuse throughout the site */
     --button-color: #007bff;
     --hover-button-color: #0056b3;
-    
 }
 
-/* Main container styling */
 #main-container {
     display: flex;
     justify-content: space-between;
-    padding: 20px 10px; /* Adjusted padding to ensure equal spacing around the divider */
+    padding: 20px 10px;
     align-items: flex-start;
     flex-direction: row;
 }
 
-/*
-.back-button {
-    background-color: #0056b3;
-    padding: 16px;
-    margin: 7px;
+#main-container h2 {
+    text-align: center;
+    width: 100%;
 }
-*/
 
 .back-button {
-    /* this class will be used to make the buttons look all the same */
     padding: 10px 20px;
     margin-bottom: 20px;
-    
     color: white;
     background-color: var(--button-color);
-
     border-radius: 5px;
-    
     text-decoration: none;
-
     transition: background-color 0.3s ease;
+    margin-top: 3px;
+    display: inline-block;
 }
 
 .back-button:hover {
-    background-color: var( --hover-button-color);
+    background-color: var(--hover-button-color);
 }
 
 .sku-grid {
@@ -50,11 +40,12 @@
     border: none;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .sku-grid > div {
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     padding: 10px;
 }
@@ -63,7 +54,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin:auto;
+    margin: auto;
     width: fit-content;
 }
 
@@ -78,14 +69,13 @@
 }
 
 .box-grid > div {
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     padding: 10px;
     height: 50px;
 }
 
-/* Grid styling for both feature sections */
 .feature-grid {
     flex: 1;
     display: grid;
@@ -96,10 +86,9 @@
     align-items: center;
 }
 
-/* Individual box styling */
 .feature-grid > div {
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     padding: 10px;
     cursor: pointer;
@@ -107,16 +96,16 @@
 }
 
 .video-box {
-    min-width: 120px; 
-    min-height: 125px; 
+    min-width: 120px;
+    min-height: 125px;
     text-align: center;
-    border: 1px solid #6272a4; 
+    border: 1px solid #6272a4;
 }
 
 .feature-grid div:hover {
     transform: scale(1.05);
 }
-/* SKU name styling */
+
 .feature-grid h2 {
     grid-column: span 4;
     break-after: always;
@@ -136,10 +125,9 @@ a {
 
 #business-features {
     position: relative;
-    border-right: 2px solid #ccc; /* Add a right border to create a vertical divider */
+    border-right: 2px solid #ccc;
 }
 
-/* Centering the content of #feature-detail-container */
 #feature-detail-container {
     display: flex;
     flex-direction: column;
@@ -147,12 +135,11 @@ a {
     text-align: center;
 }
 
-/* Styling the back button for better visibility and consistency */
 #feature-detail-container a {
     display: inline-block;
     padding: 10px 20px;
     margin-bottom: 20px;
-    background-color: #007bff; /* Updated background color to match the active filter buttons */
+    background-color: #007bff;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -160,10 +147,9 @@ a {
 }
 
 #feature-detail-container a:hover {
-    background-color: #0056b3; /* Adjusted hover effect to a slightly darker shade of green */
+    background-color: #0056b3;
 }
 
-/* Media queries for screens smaller than 768px */
 @media (max-width: 768px) {
     #main-container {
         flex-direction: column;
@@ -175,7 +161,6 @@ a {
     }
 }
 
-/* Styling for "Copilot News" section */
 #copilot-news {
     display: flex;
     flex-direction: column;
@@ -190,7 +175,7 @@ a {
     text-align: center;
 }
 
-.news-container{
+.news-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -232,14 +217,12 @@ a {
     font-size: 12px;
 }
 
-/* Additional styling for publication date within .news-item */
 .news-item span.date {
     font-size: 12px;
     color: #adff2f;
     margin-top: 5px;
 }
 
-/* Styling for filter buttons */
 #filter-buttons {
     text-align: center;
     margin-bottom: 20px;
@@ -261,13 +244,11 @@ a {
     background-color: #0056b3;
 }
 
-/* Styles for the 'active' class on filter buttons to change their background color when active */
 .filter-btn.active {
-    background-color: #ff4500; /* Change to a distinct color when active */
+    background-color: #ff4500;
     color: #ffffff;
 }
 
-/* New styles for the section of 4 boxes in index.html */
 #container .box {
     display: flex;
     justify-content: center;
@@ -281,7 +262,7 @@ a {
     border: 1px solid #6272a4;
     transition: transform 0.3s ease;
 }
- 
+
 #container .box a {
     display: flex;
     justify-content: center;
@@ -296,7 +277,6 @@ a {
     transform: scale(1.1);
 }
 
-/* Styling for the new skus.html page for consistency */
 #sku-container {
     display: flex;
     flex-direction: column;
@@ -319,12 +299,10 @@ a {
     background-color: #0056b3;
 }
 
-/* Styling for h1 elements to increase font size */
 h1 {
     font-size: 32px;
 }
 
-/* Styling for the tutorial list in tutorials.html */
 #tutorials-list {
     display: flex;
     flex-direction: column;
@@ -377,7 +355,7 @@ h1 {
     color: white;
     text-align: center;
     padding: 10px 0;
-    z-index: 10; /* Ensure it's above the canvas */
+    z-index: 10;
 }
 
 #top {
@@ -386,9 +364,9 @@ h1 {
 }
 
 #top a {
-    float: left
+    float: left;
 }
-/* Styles specific to the game landscape interface */
+
 #game-container {
     display: flex;
     justify-content: center;
@@ -402,28 +380,27 @@ h1 {
 #game-canvas {
     width: 800px;
     height: 600px;
-    border: 5px solid #8B4513; /* Leathery brown border for the canvas */
-    background-color: #000; /* Black background for the canvas */
+    border: 5px solid #8B4513;
+    background-color: #000;
 }
 
-/* Inline video player styling to match the SNES style and theme */
 .inline-video-player {
     width: 560px;
     height: 315px;
-    border: 3px solid #8B4513; /* Leathery brown border for the video player */
-    border-radius: 10px; /* Rounded corners for the video player */
-    margin-top: 20px; /* Space above the video player */
+    border: 3px solid #8B4513;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
 #tooltip {
     position: absolute;
-    display: none; /* Start hidden */
+    display: none;
     background-color: white;
     border: 3px solid white;
     color: white;
     padding: 50px;
-    z-index: 100; /* Ensure it's above the canvas */
-    pointer-events: none; /* Allows mouse events to pass through to the canvas */
+    z-index: 100;
+    pointer-events: none;
 }
 
 .coming-soon {
@@ -433,23 +410,22 @@ h1 {
     margin: 30px;
     border: 3px solid #00ff00;
     color: #00ff00;
-    width: 90%; /* Assuming the iframe width */
-    height: 500px; /* Assuming the iframe height, adjust as necessary */
-    font-size: 24px; /* Bigger font to make the message stand out */
+    width: 90%;
+    height: 500px;
+    font-size: 24px;
     font-weight: bold;
-  }
+}
 
-  .coming-soon div {
+.coming-soon div {
     height: 100%;
     padding: 50px;
-  }
+}
 
 .coming-soon-small {
     font-size: smaller;
-    color: #00ff00;   
+    color: #00ff00;
 }
 
-/* Media queries for vertical phone screens */
 @media (max-width: 820px) {
     #game-container {
         flex-direction: column;
@@ -458,4 +434,35 @@ h1 {
         width: 100%;
         height: auto;
     }
+}
+
+.titleHeader {
+    display: block;
+}
+
+.titleHeader a {
+    display: inline-block;
+    margin-right: 7px;
+}
+
+.titleHeader div {
+    display: inline-block;
+    margin-left: 7px;
+    width: 70%;
+}
+
+.titleHeader div h2 {
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 6px;
+    width: 100%;
+}
+
+.footer div {
+    margin-right: 7px;
 }

@@ -8,9 +8,10 @@
             "runtimeExecutable": "npm",
             "runtimeArgs": [
                 "run",
-                "watch"
+                "dev"
             ],
-            "port": 8080 // Default debugging port for Node.js 
+            "port": 3000, // Default port for Vite development server
+            "console": "integratedTerminal"
         }
     ]
 }
