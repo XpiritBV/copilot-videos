@@ -170,7 +170,7 @@
       "title": "VS Code supports user input as extra prompt instructions",
       "description": "Instruct GitHub Copilot with extra user input to get more fitting results. This is especially helpful if you have a specific need for a libary, or SDK version.",
       "url": "https://molson504x.github.io/GitHub-Copilot-Custom-Instructions"
-    }
+    },
     {
       "title": "GitHub Copilot video series: Levels of Enlightenment",
       "description": "Get more proficient using GitHub Copilot with the lessons learned from Rob. In this 10 part series he explains some of the lessons learned while using Copilot over the last year.",
