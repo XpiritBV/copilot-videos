@@ -134,6 +134,12 @@
                   "title": "@github chat participant",
                   "videoUrl": "",
                   "description": "Invite @github to your chat for additional assistance with GitHub information in the current repository."
+                },
+                {
+                  "id": 21,
+                  "title": "PR body generation in VS Code",
+                  "videoUrl": "https://youtu.be/_L8MdrswPV0",
+                  "description": "Create a body for a new pull request using GitHub Copilot, by using the GitHub PR extension! It will analyze the diff between the branches as well as the commit messages, and create a body from it."
                 }
               ]
             }
