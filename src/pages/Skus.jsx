@@ -8,6 +8,7 @@ const Skus = () => {
   const [features, setFeatures] = useState({ business: [], enterprise: [] });
 
   const navigate = useNavigate();
+  const isOn = false;
 
   const handleClick = (id) => {
     // navigate to the video with the given id
@@ -47,7 +48,7 @@ const Skus = () => {
       <button 
           className={`toggle-button ${isOn ? 'on' : 'off'}`}
           onClick={() => this.handleGHESToggle()}>
-        Only show GHES supported
+          Only show GHES supported
       </button>
 
       <div id="main-container">
