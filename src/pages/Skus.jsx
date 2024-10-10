@@ -1,34 +1,57 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Component } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles.css';
 import getData from '../utils/getData';
 import Header from './title-header';
 
 const Skus = () => {
-  const [features, setFeatures] = useState({ business: [], enterprise: [] });
+  const [features, setFeatures] = useState({ business: [], enterprise: [], ghesFiltered: true });
 
   const navigate = useNavigate();
-  const isOn = false;
 
   const handleClick = (id) => {
     // navigate to the video with the given id
     navigate(`/detail?videoId=${id}`);
   };
 
-  const handleGHESToggle = () => {
-    // hide the videos that do not have the ghes_support tag
-    const ghesToggle = document.getElementById('ghes-toggle');
-    const ghesSupport = document.getElementsByClassName('ghes-support');
+  const getElementByKey = (key) => {
+    const element = document.querySelector(`[data-key="${key}"]`);
+    return element;
+  }
 
-    if (ghesToggle.checked) {
-      for (let i = 0; i < ghesSupport.length; i++) {
-        ghesSupport[i].style.display = 'block';
+  const toggleFeature = (item, style) => {
+    if (!item.ghes_support) {
+      const feature = getElementByKey(item.id);
+      if (feature) {
+        feature.style.display = style;
       }
     }
+  }
+
+  const handleGHESToggle = () => {
+    // show/hide the videos that do not have the ghes_support tag
+    if (features.ghesFiltered) {
+      features.ghesFiltered = false;
+      features.business.forEach(item => {
+        toggleFeature(item, 'block');
+      });
+
+      features.enterprise.forEach(item => {
+        toggleFeature(item, 'block');
+      });
+
+      document.getElementById('ghesToggle').classList.remove('on');
+    }
     else {
-      for (let i = 0; i < ghesSupport.length; i++) {
-        ghesSupport[i].style.display = 'none';
-      }
+      features.ghesFiltered = true;
+      features.business.forEach(item => {
+        toggleFeature(item, 'none');
+      });
+
+      features.enterprise.forEach(item => {
+        toggleFeature(item, 'none');
+      });
+      document.getElementById('ghesToggle').classList.add('on');
     }
   }
 
@@ -37,7 +60,8 @@ const Skus = () => {
       .then(data => {
         const business = data.features.videos.find(feature => feature.sku === "GitHub Copilot Business");
         const enterprise = data.features.videos.find(feature => feature.sku === "GitHub Copilot Enterprise");
-        setFeatures({ business: business.items, enterprise: enterprise.items });
+        setFeatures({ business: business.items, enterprise: enterprise.items, ghesFiltered: false });
+        handleGHESToggle();
       })
       .catch(error => console.error('Error loading SKU data:', error));
   }, []);
@@ -45,9 +69,12 @@ const Skus = () => {
   return (
     <div>
       <Header title={`GitHub Copilot Business vs Enterprise`}/>
+      
       <button 
-          className={`toggle-button ${isOn ? 'on' : 'off'}`}
-          onClick={() => this.handleGHESToggle()}>
+          id="ghesToggle"
+          className={`toggle-button`}
+          onClick={() => handleGHESToggle()}
+          style={{float:`right`}}>
           Only show GHES supported
       </button>
 
@@ -56,11 +83,11 @@ const Skus = () => {
           <div>
             <h2>GitHub Copilot Business</h2>
           </div>
-          <div id="business-features" className="sku-grid">
+          <div id="business-features" className="sku-grid business">
           {
             features.business.map(item => (
               <div 
-                key={item.id} 
+                data-key={item.id} 
                 className={`video-box ${item.ghes_support ? 'ghes-support' : ''}`} 
                 onClick={() => handleClick(item.id)}
               >
@@ -75,11 +102,11 @@ const Skus = () => {
           <div>
             <h2>GitHub Copilot Enterprise</h2>
           </div>
-          <div id="enterprise-features" className="sku-grid">
+          <div id="enterprise-features" className="sku-grid enterprise">
           {features.enterprise.map(item => (
             <div key={item.id} className="video-box" onClick={() => handleClick(item.id)}>
               <h3>{item.title}</h3>
-              {!item.videoUrl && <div className="coming-soon-small">Coming soon</div>}
+              {!item.videoUrl && <div className="coming-soon-small">Video coming soon</div>}
             </div>
           ))}
           </div>

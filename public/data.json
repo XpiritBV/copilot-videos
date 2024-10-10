@@ -111,7 +111,7 @@
                 },
                 {
                   "id": 15,
-                  "title": "Pull request body generation in WebUI",
+                  "title": "PR body generation in WebUI",
                   "videoUrl": "",
                   "description": "Automatically generate detailed pull request bodies with Copilot in the webUI.",
                   "ghes_support": false
