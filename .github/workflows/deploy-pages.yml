@@ -50,6 +50,9 @@ jobs:
           echo "Building in repo [$REPO_NAME] with build number [$BUILDNUMBER] for [$NODE_ENV] environment."
           npm run build
 
+          # copy the index file from the dist folder into the 404 file
+          cp dist/index.html dist/404.html
+
       - name: Listfiles
         run: |
           cd dist

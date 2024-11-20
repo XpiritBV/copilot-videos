@@ -35,7 +35,6 @@
 .sku-grid {
     flex: 1;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     margin-left: -5px;
     border: none;
     justify-content: center;
@@ -48,6 +47,14 @@
     align-items: center;
     gap: 20px;
     padding: 10px;
+}
+
+.sku-grid.business {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.sku-grid.enterprise {
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .grid-container {
@@ -465,4 +472,18 @@ h1 {
 
 .footer div {
     margin-right: 7px;
+}
+
+.toggle-button {
+    padding: 10px 20px;
+    color: white;
+    background-color: var(--button-color);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-button.on {
+    background-color: red;
 }
