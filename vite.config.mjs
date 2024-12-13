@@ -23,7 +23,7 @@ export default defineConfig({
   },
   publicDir: 'public',
   define: {
-    'process.env.BUILDNUMBER': JSON.stringify(process.env.BUILDNUMBER) || 999,
+    'import.meta.env.REACT_APP_BUILDNUMBER': JSON.stringify(process.env.BUILDNUMBER) || JSON.stringify('999'),
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV) || "default",
   }
 });

@@ -11,7 +11,7 @@
                 "dev"
             ],
             "port": 3000, // Default port for Vite development server
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
         }
     ]
 }

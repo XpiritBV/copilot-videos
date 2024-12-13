@@ -5,7 +5,7 @@ import getData from '../utils/getData';
 import Header from './title-header';
 
 const Skus = () => {
-  const [features, setFeatures] = useState({ business: [], enterprise: [], ghesFiltered: true });
+  const [features, setFeatures] = useState({ individual: [], business: [], enterprise: [], ghesFiltered: true });
 
   const navigate = useNavigate();
 
@@ -58,9 +58,10 @@ const Skus = () => {
   useEffect(() => {
     getData()
       .then(data => {
+        const individual = data.features.videos.find(feature => feature.sku === "GitHub Copilot Individual");
         const business = data.features.videos.find(feature => feature.sku === "GitHub Copilot Business");
         const enterprise = data.features.videos.find(feature => feature.sku === "GitHub Copilot Enterprise");
-        setFeatures({ business: business.items, enterprise: enterprise.items, ghesFiltered: false });
+        setFeatures({individual: individual.items, business: business.items, enterprise: enterprise.items, ghesFiltered: false });
         handleGHESToggle();
       })
       .catch(error => console.error('Error loading SKU data:', error));
@@ -68,7 +69,7 @@ const Skus = () => {
 
   return (
     <div>
-      <Header title={`GitHub Copilot Business vs Enterprise`}/>
+      <Header title={`GitHub Copilot Features per license type`}/>
       
       <button 
           id="ghesToggle"
@@ -79,6 +80,25 @@ const Skus = () => {
       </button>
 
       <div id="main-container">
+      <div>
+          <div>
+            <h2>GitHub Copilot Individual</h2>
+          </div>
+          <div id="individual-features" className="sku-grid individual">
+          {
+            features.individual.map(item => (
+              <div 
+                data-key={item.id} 
+                className={`video-box ${item.ghes_support ? 'ghes-support' : ''}`} 
+                onClick={() => handleClick(item.id)}
+              >
+                <h3>{item.title}</h3>
+                {!item.videoUrl && <div className="coming-soon-small">Video coming soon</div>}
+              </div>
+            ))
+          }
+          </div>
+        </div>
         <div>
           <div>
             <h2>GitHub Copilot Business</h2>
