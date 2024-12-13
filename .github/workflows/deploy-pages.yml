@@ -43,11 +43,11 @@ jobs:
       - name: Build project
         env:
           NODE_ENV: ${{ vars.NODE_ENV }} # use the vars to indicate the env that is uesd in the react-config.js to set the base url / folder
+          REACT_APP_BUILDNUMBER: ${{ github.run_number }}
         run: |
           export NODE_ENV=$NODE_ENV
           export REPO_NAME="$(echo $GITHUB_REPOSITORY | cut -d'/' -f2)"
-          export BUILDNUMBER="$(echo $GITHUB_RUN_NUMBER)"
-          echo "Building in repo [$REPO_NAME] with build number [$BUILDNUMBER] for [$NODE_ENV] environment."
+          echo "Building in repo [$REPO_NAME] with build number [$REACT_APP_BUILDNUMBER] for [$NODE_ENV] environment."
           npm run build
 
           # copy the index file from the dist folder into the 404 file

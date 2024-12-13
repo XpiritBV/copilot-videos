@@ -7,6 +7,9 @@ const Index = () => {
   const [feedCounts, setFeedCounts] = useState({});
   const [totalItemCount, setTotalItemCount] = useState(0);
 
+  const REACT_APP_NODE_ENV = "bla";
+  const buildNumber = import.meta.env.REACT_APP_BUILDNUMBER || 'unknown';
+
   useEffect(() => {
     const fetchFeeds = async () => {
       try {
@@ -22,62 +25,61 @@ const Index = () => {
   }, []);
 
   useEffect(() => {
-    const fetchRSSItems = async () => {
-    const counts = {};
-    let totalItems = 0;
-    const uniqueItems = new Map();
+    const fetchRSSItems = async () => {;
 
-    for (const feed of feeds) {
+      const counts = {};
+      let totalItems = 0;
+      const uniqueItems = new Map();
 
-      try {
-        let response;
-        if (feed.cors) {
-          // Todo: Use a proxy to avoid CORS issues
-          continue;
-        }
-        else {
-          response = await fetch(feed.url).then(res => res.text());
-        }
-        const data = new window.DOMParser().parseFromString(response, "text/xml");
-        const items = data.querySelectorAll("item");
-        counts[feed.name] = items.length;
-        totalItems += items.length;
-
-        items.forEach(item => {
-          const title = item.querySelector("title").textContent;
-          const description = item.querySelector("description").textContent;
-          const pubDate = new Date(item.querySelector("pubDate").textContent);
-          const formattedDate = pubDate.toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' });
-
-          if (uniqueItems.has(title)) {
-            uniqueItems.get(title).feeds.push(feed.name);
+      for (const feed of feeds) {
+        try {
+          let response;
+          if (feed.cors) {
+            // Todo: Use a proxy to avoid CORS issues
+            continue;
           } else {
-            uniqueItems.set(title, {
-              description,
-              pubDate: formattedDate,
-              feeds: [feed.name]
-            });
+            response = await fetch(feed.url).then(res => res.text());
           }
-        });
-      } catch (error) {
-        console.error(`Error fetching feed ${feed.name}:`, error);
+          const data = new window.DOMParser().parseFromString(response, "text/xml");
+          const items = data.querySelectorAll("item");
+          counts[feed.name] = items.length;
+          totalItems += items.length;
+
+          items.forEach(item => {
+            const title = item.querySelector("title").textContent;
+            const description = item.querySelector("description").textContent;
+            const pubDate = new Date(item.querySelector("pubDate").textContent);
+            const formattedDate = pubDate.toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' });
+
+            if (uniqueItems.has(title)) {
+              uniqueItems.get(title).feeds.push(feed.name);
+            } else {
+              uniqueItems.set(title, {
+                description,
+                pubDate: formattedDate,
+                feeds: [feed.name]
+              });
+            }
+          });
+        } catch (error) {
+          console.error(`Error fetching feed ${feed.name}:`, error);
+        }
       }
-    }
 
-    uniqueItems.forEach((value, title) => {
-      const newsItem = document.createElement('div');
-      newsItem.className = 'news-item';
-      newsItem.innerHTML = `
-        <h4>${title}</h4>
-        <p>${value.description}</p>
-        ${value.feeds.map(feed => `<span>${feed}</span>`).join('')}
-        <span class="date">Published: ${value.pubDate}</span>
-      `;
-      document.getElementById('news-content').appendChild(newsItem);
-    });
+      uniqueItems.forEach((value, title) => {
+        const newsItem = document.createElement('div');
+        newsItem.className = 'news-item';
+        newsItem.innerHTML = `
+          <h4>${title}</h4>
+          <p>${value.description}</p>
+          ${value.feeds.map(feed => `<span>${feed}</span>`).join('')}
+          <span class="date">Published: ${value.pubDate}</span>
+        `;
+        document.getElementById('news-content').appendChild(newsItem);
+      });
 
-    setFeedCounts(counts);
-    setTotalItemCount(totalItems);
+      setFeedCounts(counts);
+      setTotalItemCount(totalItems);
     };
 
     if (feeds.length > 0) {
@@ -161,11 +163,13 @@ const Index = () => {
       </div>
 
       <div className="footer">
-        <div>Build: {process.env.BUILDNUMBER}</div>
-        <div>NODE_ENV: {process.env.NODE_ENV}</div>
+                
+        <div>Build: {buildNumber}</div>
+        <div>NODE_ENV: {REACT_APP_NODE_ENV}</div>
       </div>
     </div>
   );
 };
+
 
 export default Index;

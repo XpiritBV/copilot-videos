@@ -2,7 +2,7 @@
   "features": {
     "videos": [
       {
-              "sku": "GitHub Copilot Business",
+              "sku": "GitHub Copilot Individual",
               "items": [
                 {
                   "id": 0,
@@ -140,6 +140,39 @@
               ]
             },
             {
+              "sku": "GitHub Copilot Business",
+              "items": [
+                {
+                  "id": 23,
+                  "title": "Usage metrics",
+                  "videoUrl": "",
+                  "description": "Track your team's usage of Copilot with detailed metrics and insights.",
+                  "ghes_support": false
+                },
+                {
+                  "id": 24,
+                  "title": "Data excluded from training by default",
+                  "videoUrl": "",
+                  "description": "From the business version and upwards, GitHub Copilot will not use your prompt and nteractions to train Copilot on.",
+                  "ghes_support": false
+                },
+                {
+                  "id": 25,
+                  "title": "User management",
+                  "videoUrl": "",
+                  "description": "This lets you assign licenses per user, for example to every user in a team / organization / or repository.",
+                  "ghes_support": false
+                },
+                {
+                  "id": 26,
+                  "title": "Content Exclusions",
+                  "videoUrl": "",
+                  "description": "With Content Exclusions you can exclude certain parts of your codebase from being sent to Copilot. Think for example of files containing sensitive information, like secrets.",
+                  "ghes_support": false
+                }
+              ]
+            },
+            {
               "sku": "GitHub Copilot Enterprise",
               "items": [                
                 {
@@ -159,6 +192,12 @@
                   "title": "Fine tuned models",
                   "videoUrl": "",
                   "description": "Benefit from models fine-tuned for your specific coding needs with Copilot."
+                },
+                {
+                  "id": 22,
+                  "title": "Technical Preview access to Copilot Workspace",
+                  "videoUrl": "https://youtu.be/N64ozm3x88k",
+                  "description": "Technical Preview access to Copilot Workspace is available for Copilot Enterprise users. In this video Rob shows an early version of Workspace and how it lets you work in the context of an issue and the entire repository to get your task executed."
                 }
               ]
             }

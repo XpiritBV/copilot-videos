@@ -13,7 +13,8 @@
 
 #main-container h2 {
     text-align: center;
-    width: 100%;
+    width: max-content;
+    padding: 9px;
 }
 
 .back-button {
@@ -47,10 +48,15 @@
     align-items: center;
     gap: 20px;
     padding: 10px;
+    height: 100%;
+}
+
+.sku-grid.individual {
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .sku-grid.business {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .sku-grid.enterprise {
@@ -130,6 +136,11 @@ a {
     color: white;
 }
 
+#individual-features {
+    position: relative;
+    border-right: 2px solid #ccc;
+}
+
 #business-features {
     position: relative;
     border-right: 2px solid #ccc;
@@ -164,7 +175,7 @@ a {
         padding: 10px;
     }
     .feature-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 

@@ -1,7 +1,8 @@
 {
   "scripts": {
+    "build_number": "export REACT_APP_BUILDNUMBER=$(git rev-parse --short HEAD)",
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run build_number && vite build",
     "preview": "vite build && vite preview"
   },
   "dependencies": {
