@@ -136,6 +136,69 @@
                   "videoUrl": "https://youtu.be/_L8MdrswPV0",
                   "description": "Create a body for a new pull request using GitHub Copilot, by using the GitHub PR extension! It will analyze the diff between the branches as well as the commit messages, and create a body from it.",
                   "ghes_support": true
+                },
+                {
+                  "id": 27,
+                  "title": "Multi-Models",
+                  "videoUrl": "",
+                  "description": "Leverage different AI models for various coding scenarios.",
+                  "ghes_support": false
+                },
+                {
+                  "id": 28,
+                  "title": "Multi-file Edits",
+                  "videoUrl": "",
+                  "description": "Copilot can make edits across multiple files in a single suggestion.",
+                  "ghes_support": false
+                },
+                {
+                  "id": 29,
+                  "title": "Ice Breakers",
+                  "videoUrl": "",
+                  "description": "Generate starter templates or boilerplate code to jump-start development.",
+                  "ghes_support": false
+                },
+                {
+                  "id": 30,
+                  "title": "Local In-Editor Code Reviews",
+                  "videoUrl": "",
+                  "description": "Highlight and review suggested code changes directly from within the Visual Studio editor.",
+                  "ghes_support": false
+                },
+                {
+                  "id": 31,
+                  "title": "Copilot Vision",
+                  "videoUrl": "",
+                  "description": "Code smarter with contextual understanding of surrounding logic, context, and file structure.",
+                  "ghes_support": false
+                },
+                {
+                  "id": 32,
+                  "title": "Playwright Test Generation",
+                  "videoUrl": "",
+                  "description": "Generate Playwright tests for UI testing scenarios directly from existing code.",
+                  "ghes_support": false
+                },
+                {
+                  "id": 33,
+                  "title": "Check-in Comment Suggestions",
+                  "videoUrl": "",
+                  "description": "Copilot proposes commit messages based on the code changes.",
+                  "ghes_support": false
+                },
+                {
+                  "id": 34,
+                  "title": "Commit Message Custom Instructions",
+                  "videoUrl": "",
+                  "description": "Customize commit messages with tailored instructions for more descriptive and meaningful comments.",
+                  "ghes_support": false
+                },
+                {
+                  "id": 35,
+                  "title": "Function Calling",
+                  "videoUrl": "",
+                  "description": "Automatically generate function calls and connect logic across files.",
+                  "ghes_support": false
                 }
               ]
             },
