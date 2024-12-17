@@ -445,12 +445,16 @@ h1 {
     position: absolute;
     bottom: 29px;
     left: 36%;
-    background-image: url(play-button.png);
     height: 30px;
     width: 30px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.video-box .play .img-play {
+    height: 100%;
+    width: 100%;
 }
 
 .video-box .coming-soon-small {

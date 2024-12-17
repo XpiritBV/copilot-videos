@@ -7,7 +7,7 @@ const Index = () => {
   const [feedCounts, setFeedCounts] = useState({});
   const [totalItemCount, setTotalItemCount] = useState(0);
 
-  const REACT_APP_NODE_ENV = "bla";
+  const REACT_APP_NODE_ENV = "unknown";
   const buildNumber = import.meta.env.REACT_APP_BUILDNUMBER || 'unknown';
 
   useEffect(() => {
