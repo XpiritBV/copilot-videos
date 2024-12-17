@@ -161,7 +161,7 @@
                 {
                   "id": 30,
                   "title": "Local In-Editor Code Reviews",
-                  "videoUrl": "",
+                  "videoUrl": "https://youtu.be/t74rlukNevM",
                   "description": "Highlight and review suggested code changes directly from within the Visual Studio editor.",
                   "ghes_support": false
                 },
