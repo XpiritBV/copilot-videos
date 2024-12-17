@@ -32,6 +32,11 @@ const Skus = () => {
     // show/hide the videos that do not have the ghes_support tag
     if (features.ghesFiltered) {
       features.ghesFiltered = false;
+
+      features.individual.forEach(item => {
+        toggleFeature(item, 'block');
+      });
+
       features.business.forEach(item => {
         toggleFeature(item, 'block');
       });
@@ -44,6 +49,11 @@ const Skus = () => {
     }
     else {
       features.ghesFiltered = true;
+      
+      features.individual.forEach(item => {
+        toggleFeature(item, 'none');
+      });
+
       features.business.forEach(item => {
         toggleFeature(item, 'none');
       });
@@ -51,6 +61,7 @@ const Skus = () => {
       features.enterprise.forEach(item => {
         toggleFeature(item, 'none');
       });
+
       document.getElementById('ghesToggle').classList.add('on');
     }
   }
@@ -88,6 +99,7 @@ const Skus = () => {
           {
             features.individual.map(item => (
               <div 
+                key={item.id} 
                 data-key={item.id} 
                 className={`video-box ${item.ghes_support ? 'ghes-support' : ''}`} 
                 onClick={() => handleClick(item.id)}
@@ -108,6 +120,7 @@ const Skus = () => {
           {
             features.business.map(item => (
               <div 
+                key={item.id} 
                 data-key={item.id} 
                 className={`video-box ${item.ghes_support ? 'ghes-support' : ''}`} 
                 onClick={() => handleClick(item.id)}
@@ -126,7 +139,12 @@ const Skus = () => {
           </div>
           <div id="enterprise-features" className="sku-grid enterprise">
           {features.enterprise.map(item => (
-            <div key={item.id} className="video-box" onClick={() => handleClick(item.id)}>
+            <div 
+              key={item.id} 
+              data-key={item.id} 
+              className={`video-box ${item.ghes_support ? 'ghes-support' : ''}`} 
+              onClick={() => handleClick(item.id)}
+            >
               <h3>{item.title}</h3>
               {!item.videoUrl && <div className="coming-soon-small">Video coming soon</div>}
               {item.videoUrl && <div className="play"><img src="play-button.png" className="img-play"></img></div>}
