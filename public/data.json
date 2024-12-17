@@ -112,7 +112,7 @@
                 {
                   "id": 15,
                   "title": "PR body generation in WebUI",
-                  "videoUrl": "",
+                  "videoUrl": "https://youtu.be/chD-UE4DmJk",
                   "description": "Automatically generate detailed pull request bodies with Copilot in the webUI.",
                   "ghes_support": false
                 },
@@ -140,15 +140,15 @@
                 {
                   "id": 27,
                   "title": "Multi-Models",
-                  "videoUrl": "",
+                  "videoUrl": "https://youtu.be/EzEH3wg6GaI",
                   "description": "Leverage different AI models for various coding scenarios.",
                   "ghes_support": false
                 },
                 {
                   "id": 28,
                   "title": "Multi-file Edits",
-                  "videoUrl": "",
-                  "description": "Copilot can make edits across multiple files in a single suggestion.",
+                  "videoUrl": "https://youtu.be/lI_5yc7zrDo",
+                  "description": "Copilot can make edits across multiple files in a single suggestion. This greatly improves the way of working by opening both your code as well as your tests for example, and update both at the same time.",
                   "ghes_support": false
                 },
                 {
@@ -181,9 +181,9 @@
                 },
                 {
                   "id": 33,
-                  "title": "Check-in Comment Suggestions",
-                  "videoUrl": "",
-                  "description": "Copilot proposes commit messages based on the code changes.",
+                  "title": "Commit Message Suggestions",
+                  "videoUrl": "https://youtu.be/fO31a_OS2EA",
+                  "description": "Copilot proposes commit messages based on the code changes in the current changeset.",
                   "ghes_support": false
                 },
                 {
@@ -242,25 +242,29 @@
                   "id": 16,
                   "title": "Chat with knowledge bases",
                   "videoUrl": "",
-                  "description": "Access knowledge bases directly through Copilot's chat for quick information retrieval."
+                  "description": "Access knowledge bases directly through Copilot's chat for quick information retrieval.",
+                  "ghes_support": false
                 },
                 {
                   "id": 17,
                   "title": "Web search with Bing",
                   "videoUrl": "",
-                  "description": "Perform web searches within your coding environment using Copilot and Bing."
+                  "description": "Perform web searches within your coding environment using Copilot and Bing.",
+                  "ghes_support": false
                 },
                 {
                   "id": 18,
                   "title": "Fine tuned models",
                   "videoUrl": "",
-                  "description": "Benefit from models fine-tuned for your specific coding needs with Copilot."
+                  "description": "Benefit from models fine-tuned for your specific coding needs with Copilot.",
+                  "ghes_support": false
                 },
                 {
                   "id": 22,
-                  "title": "Technical Preview access to Copilot Workspace",
+                  "title": "Preview for Copilot Workspace",
                   "videoUrl": "https://youtu.be/N64ozm3x88k",
-                  "description": "Technical Preview access to Copilot Workspace is available for Copilot Enterprise users. In this video Rob shows an early version of Workspace and how it lets you work in the context of an issue and the entire repository to get your task executed."
+                  "description": "Technical Preview access to Copilot Workspace is available for Copilot Enterprise users. In this video Rob shows an early version of Workspace and how it lets you work in the context of an issue and the entire repository to get your task executed.",
+                  "ghes_support": false
                 }
               ]
             }

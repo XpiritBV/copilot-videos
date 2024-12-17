@@ -113,6 +113,8 @@
     min-height: 125px;
     text-align: center;
     border: 1px solid #6272a4;
+    position: relative;
+    cursor: pointer;
 }
 
 .feature-grid div:hover {
@@ -439,7 +441,23 @@ h1 {
     padding: 50px;
 }
 
-.coming-soon-small {
+.video-box .play {
+    position: absolute;
+    bottom: 29px;
+    left: 36%;
+    background-image: url(play-button.png);
+    height: 30px;
+    width: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.video-box .coming-soon-small {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
     font-size: smaller;
     color: #00ff00;
 }

@@ -127,7 +127,7 @@ const Index = () => {
       <div className="grid-container">
         <div id="container" className="box-grid">
           <div className="box">
-            <Link to="/skus">Copilot Business vs Enterprise</Link>
+            <Link to="/skus">Copilot Feature Highlights</Link>
           </div>
           <div className="box">
             <Link to="/gamelandscape">Levels of Enlightenment</Link>

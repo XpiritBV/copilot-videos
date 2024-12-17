@@ -94,6 +94,7 @@ const Skus = () => {
               >
                 <h3>{item.title}</h3>
                 {!item.videoUrl && <div className="coming-soon-small">Video coming soon</div>}
+                {item.videoUrl && <div className="play"></div>}
               </div>
             ))
           }
@@ -113,6 +114,7 @@ const Skus = () => {
               >
                 <h3>{item.title}</h3>
                 {!item.videoUrl && <div className="coming-soon-small">Video coming soon</div>}
+                {item.videoUrl && <div className="play"></div>}
               </div>
             ))
           }
@@ -127,6 +129,7 @@ const Skus = () => {
             <div key={item.id} className="video-box" onClick={() => handleClick(item.id)}>
               <h3>{item.title}</h3>
               {!item.videoUrl && <div className="coming-soon-small">Video coming soon</div>}
+              {item.videoUrl && <div className="play"></div>}
             </div>
           ))}
           </div>
