@@ -199,6 +199,13 @@
                   "videoUrl": "",
                   "description": "Automatically generate function calls and connect logic across files.",
                   "ghes_support": false
+                },
+                {
+                  "id": 17,
+                  "title": "Web search with Bing",
+                  "videoUrl": "",
+                  "description": "Perform web searches within your coding environment using Copilot and Bing.",
+                  "ghes_support": false
                 }
               ]
             },
@@ -243,13 +250,6 @@
                   "title": "Chat with knowledge bases",
                   "videoUrl": "",
                   "description": "Access knowledge bases directly through Copilot's chat for quick information retrieval.",
-                  "ghes_support": false
-                },
-                {
-                  "id": 17,
-                  "title": "Web search with Bing",
-                  "videoUrl": "",
-                  "description": "Perform web searches within your coding environment using Copilot and Bing.",
                   "ghes_support": false
                 },
                 {
