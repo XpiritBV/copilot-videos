@@ -206,6 +206,14 @@
                   "videoUrl": "",
                   "description": "Perform web searches within your coding environment using Copilot and Bing.",
                   "ghes_support": false
+                },
+                {
+                  
+                  "id": 36,
+                  "title": "Explain failed action jobs",
+                  "videoUrl": "",
+                  "description": "Get help from GitHub Copilot to explain why a certain action job failed and help you fixing it.",
+                  "ghes_support": false
                 }
               ]
             },
@@ -257,13 +265,6 @@
                   "title": "Fine tuned models",
                   "videoUrl": "",
                   "description": "Benefit from models fine-tuned for your specific coding needs with Copilot.",
-                  "ghes_support": false
-                },
-                {
-                  "id": 22,
-                  "title": "Preview for Copilot Workspace",
-                  "videoUrl": "https://youtu.be/N64ozm3x88k",
-                  "description": "Technical Preview access to Copilot Workspace is available for Copilot Enterprise users. In this video Rob shows an early version of Workspace and how it lets you work in the context of an issue and the entire repository to get your task executed.",
                   "ghes_support": false
                 }
               ]

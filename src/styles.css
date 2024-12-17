@@ -51,7 +51,7 @@
 }
 
 .sku-grid.individual {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .sku-grid.business {
@@ -129,7 +129,7 @@
 body {
     background: radial-gradient(circle, rgba(34,34,59,1) 0%, rgba(14,14,44,1) 35%, black 100%);
     color: white;
-    max-width: 1200px;
+    max-width: 1400px;
     font-family: 'Roboto', sans-serif;
 }
 
