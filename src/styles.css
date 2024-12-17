@@ -48,7 +48,6 @@
     align-items: center;
     gap: 20px;
     padding: 10px;
-    height: 100%;
 }
 
 .sku-grid.individual {
@@ -110,7 +109,7 @@
 
 .video-box {
     min-width: 120px;
-    min-height: 125px;
+    min-height: 140px;
     text-align: center;
     border: 1px solid #6272a4;
     position: relative;
