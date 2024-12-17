@@ -266,6 +266,20 @@
                   "videoUrl": "",
                   "description": "Benefit from models fine-tuned for your specific coding needs with Copilot.",
                   "ghes_support": false
+                },
+                {
+                  "id": 37,
+                  "title": "Set coding guidelines for code review",
+                  "videoUrl": "",
+                  "description": "Define coding guidelines for Copilot to follow during code reviews.",
+                  "ghes_support": false
+                },
+                {
+                  "id": 22,
+                  "title": "Preview for Copilot Workspace",
+                  "videoUrl": "https://youtu.be/N64ozm3x88k",
+                  "description": "Technical Preview access to Copilot Workspace is available for Copilot Enterprise users. In this video Rob shows an early version of Workspace and how it lets you work in the context of an issue and the entire repository to get your task executed.",
+                  "ghes_support": false
                 }
               ]
             }
