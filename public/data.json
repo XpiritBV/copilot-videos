@@ -166,13 +166,6 @@
                   "ghes_support": false
                 },
                 {
-                  "id": 31,
-                  "title": "Copilot Vision",
-                  "videoUrl": "",
-                  "description": "Code smarter with contextual understanding of surrounding logic, context, and file structure.",
-                  "ghes_support": false
-                },
-                {
                   "id": 32,
                   "title": "Playwright Test Generation",
                   "videoUrl": "",
@@ -191,13 +184,6 @@
                   "title": "Commit Message Custom Instructions",
                   "videoUrl": "",
                   "description": "Customize commit messages with tailored instructions for more descriptive and meaningful comments.",
-                  "ghes_support": false
-                },
-                {
-                  "id": 35,
-                  "title": "Function Calling",
-                  "videoUrl": "",
-                  "description": "Automatically generate function calls and connect logic across files.",
                   "ghes_support": false
                 },
                 {
