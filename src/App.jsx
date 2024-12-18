@@ -10,6 +10,7 @@ import Tutorials from './pages/Tutorials';
 import './styles.css';
 import basename from '../react-config';
 import NotFound from './pages/NotFound';
+import PoweredBy from './PoweredBy';
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
+
+      <PoweredBy />
     </div>
   );
 }

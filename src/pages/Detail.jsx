@@ -63,7 +63,7 @@ const Detail = () => {
         )}
       </div>
       <div id="description-container">
-        <p id="feature-description">{videoDetails.description}</p>
+        <p className="feature-description">{videoDetails.description}</p>
       </div>
     </div>
   );

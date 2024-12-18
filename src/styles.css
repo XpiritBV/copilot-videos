@@ -1,6 +1,12 @@
 :root {
     --button-color: #007bff;
     --hover-button-color: #0056b3;
+    width: 100%;
+}
+
+.poweredBy {
+    width:100%;
+    max-width: 200px;
 }
 
 #main-container {
@@ -169,6 +175,11 @@ a {
     background-color: #0056b3;
 }
 
+.feature-description {
+    max-width: 300px;
+    text-align: left;
+}
+
 @media (max-width: 768px) {
     #main-container {
         flex-direction: column;
@@ -185,8 +196,10 @@ a {
     flex-direction: column;
     align-items: center;
     margin-top: 40px;
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     border-radius: 8px;
+    width: 100%;
 }
 
 #copilot-news h2 {
@@ -207,8 +220,7 @@ a {
 }
 
 .news-item {
-    width: 45%;
-    min-width: 600px;
+    max-width: 600px;
     margin: 10px;
     padding: 15px;
     border-radius: 8px;
@@ -280,6 +292,7 @@ a {
     border-radius: 5px;
     border: 1px solid #6272a4;
     transition: transform 0.3s ease;
+    flex-direction: column;
 }
 
 #container .box a {

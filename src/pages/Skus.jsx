@@ -69,9 +69,9 @@ const Skus = () => {
   useEffect(() => {
     getData()
       .then(data => {
-        const individual = data.features.videos.find(feature => feature.sku === "GitHub Copilot Individual");
-        const business = data.features.videos.find(feature => feature.sku === "GitHub Copilot Business");
-        const enterprise = data.features.videos.find(feature => feature.sku === "GitHub Copilot Enterprise");
+        const individual = data.features.videos.find(feature => feature.sku_id === 1);
+        const business = data.features.videos.find(feature => feature.sku_id === 2);
+        const enterprise = data.features.videos.find(feature => feature.sku_id === 3);
         setFeatures({individual: individual.items, business: business.items, enterprise: enterprise.items, ghesFiltered: false });
         handleGHESToggle();
       })
@@ -93,7 +93,7 @@ const Skus = () => {
       <div id="main-container">
       <div>
           <div>
-            <h2>GitHub Copilot Individual</h2>
+            <h2>GitHub Copilot Free / Pro</h2>
           </div>
           <div id="individual-features" className="sku-grid individual">
           {

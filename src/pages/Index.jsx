@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles.css';
+import PoweredBy from '../PoweredBy';
 
 const Index = () => {
   const [feeds, setFeeds] = useState([]);
@@ -137,6 +138,7 @@ const Index = () => {
           </div>
           <div className="box">
             <img src="copilot.jfif" alt="Logo of a pilot with a headset and a leather jacket" style={{ width: '100px', height: 'auto' }} />
+            <PoweredBy />
           </div>
         </div>
       </div>
