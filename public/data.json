@@ -36,7 +36,7 @@
                 {
                   "id": 3,
                   "title": "Chat on mobile",
-                  "videoUrl": "",
+                  "videoUrl": "https://youtu.be/EQH-V5jQ0aA",
                   "description": "Get coding assistance on-the-go with Copilot's mobile chat feature. This lets you summarize issues/pull requests/discussions, or ask broader questions about a repository for example.",
                   "ghes_support": true
                 },
@@ -218,7 +218,7 @@
                 {
                   "id": 23,
                   "title": "Usage metrics",
-                  "videoUrl": "",
+                  "videoUrl": "https://youtu.be/43yFNFT8-R4",
                   "description": "Track your team's usage of Copilot with detailed metrics and insights.",
                   "ghes_support": false
                 },
@@ -239,7 +239,7 @@
                 {
                   "id": 26,
                   "title": "Content Exclusions",
-                  "videoUrl": "",
+                  "videoUrl": "https://youtu.be/J2qaVAaQzY8",
                   "description": "With Content Exclusions you can exclude certain parts of your codebase from being sent to Copilot. Think for example of files containing sensitive information, like secrets.",
                   "ghes_support": false
                 }
