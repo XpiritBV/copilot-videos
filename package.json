@@ -3,7 +3,8 @@
     "build_number": "export REACT_APP_BUILDNUMBER=$(git rev-parse --short HEAD)",
     "dev": "vite",
     "build": "npm run build_number && vite build",
-    "preview": "vite build && vite preview"
+    "preview": "vite build && vite preview",
+    "dupe": "node /workspaces/github-copilot-updates/.github/workflows/duplicate-ids-detection.js"
   },
   "dependencies": {
     "react": "^18.2.0",

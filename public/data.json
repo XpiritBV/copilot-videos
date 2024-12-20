@@ -13,7 +13,14 @@
                   "ghes_support": true
                 },
                 {
-                  "id": 99,
+                  "id": 38,
+                  "title": "What is GitHub Copilot?",
+                  "videoUrl": "https://youtu.be/x0sBUlFHJrg",
+                  "description": "Rob explains on a high level what #GitHub #Copilot is and what you can expect. The different license types are explained and where you can find certain functionality.",
+                  "ghes_support": true	
+                },
+                {
+                  "id": 39,
                   "title": "Getting started with GitHub Copilot Free",
                   "videoUrl": "https://youtu.be/dMbOh114Vd4",
                   "description": "To get started with GitHub Copilot Free you can go to https://gh.io/copilot and open the VS Code link from there. This will trigger your VS Code to install the Copilot extensions and ask you to get started with Copilot for free. This includes 2000 suggestions and 50 chat completions per month, for free.",
@@ -22,14 +29,14 @@
                 {
                   "id": 1,
                   "title": "Code completions / suggestions",
-                  "videoUrl": "",
+                  "videoUrl": "https://youtu.be/EPXdLelATrE",
                   "description": "Enhance your coding experience with AI-powered code completions while you are typing. Also called 'suggestions'. These are the most common way of using Copilot as they show up as a suggestion while you are typing in your editor.",
                   "ghes_support": true
                 },
                 {
                   "id": 2,
                   "title": "Chat in IDE",
-                  "videoUrl": "",
+                  "videoUrl": "https://youtu.be/TorMsn9bjLY",
                   "description": "Communicate with Copilot directly within your IDE for instant assistance. You can have multi turn conversations with Copilot on things in your code, or ask it questions on things surrounding your code, like 'how do I do this in Python', or 'how do I run the unit tests from my terminal'.",
                   "ghes_support": true
                 },
