@@ -60,6 +60,7 @@ if (duplicates.length > 0) {
   fs.writeFileSync(summaryFilePath, summaryContent, 'utf8');
   console.log('Duplicate IDs found and reported.');
   console.log(`Highest ID: [${highestId}]`);
+  process.exit(1); // Return a non-zero exit code to indicate that there are duplicate IDs
 } else {
   console.log('No duplicate IDs found.');
   

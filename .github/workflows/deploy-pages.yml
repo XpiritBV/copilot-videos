@@ -42,7 +42,7 @@ jobs:
 
       - name: Prevent duplicate ID's in the data.json
         run: |
-          node duplicate-ids-detection.js
+          node .github/workflows/duplicate-ids-detection.js
 
       - name: Build project
         env:
