@@ -40,6 +40,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Prevent duplicate ID's in the data.json
+        run: |
+          node duplicate-ids-detection.js
+
       - name: Build project
         env:
           NODE_ENV: ${{ vars.NODE_ENV }} # use the vars to indicate the env that is uesd in the react-config.js to set the base url / folder
